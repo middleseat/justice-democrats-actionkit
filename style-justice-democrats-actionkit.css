@@ -1,3 +1,5 @@
+@import url("https://use.typekit.net/vfn8yic.css");
+
 /* ==========================================================================
    ak-modern.css
 
@@ -514,7 +516,7 @@ h3 { font-size: 22px; line-height: 30px; font-weight: 200; margin: 18px 0 4px; /
 h4 { font-size: 16px; line-height: 20px; font-weight: 600; margin: 10px 0 4px; }
 /* Used for small headings */
 h5 { font-weight: 200; text-transform: uppercase; margin: 10px 0; }
-.subA { font-family: PeoplePower; font-weight: 600; text-transform: uppercase; font-size: 20px; line-height: 20px; color: #000; border-bottom: 2px solid #000; margin-bottom: 20px; }
+.subA { font-family: "proxima-nova"; font-weight: 600; text-transform: uppercase; font-size: 20px; line-height: 20px; color: #000; border-bottom: 2px solid #000; margin-bottom: 20px; }
 .subB { font-weight: 600; }
 ol { padding: 0 0 0 15px; }
 ol li { margin-bottom: 20px; }
@@ -1162,7 +1164,6 @@ a.ak-share-button {
 }
 .ak-share-button.ak-facebook {
     background-color: #3B5998;
-    background-image: url("https://peoplepower.org/assets/icon-fb.svg");
     background-repeat: no-repeat;
     background-size: 30px;
     background-position-x: 20px;
@@ -1173,7 +1174,6 @@ a.ak-share-button {
 }
 .ak-share-button.ak-twitter {
     background-color: #4299FF;
-    background-image: url("https://peoplepower.org/assets/icon-twitter.svg");
     background-repeat: no-repeat;
     background-size: 30px;
     background-position-x: 20px;
@@ -2776,16 +2776,15 @@ body.ak-pagetype-event_create .clear {
 ================================================================ */
 
 .clear { width:100%;height:0;float:none;clear:both;}
-/* body { font-family: "PeoplePower", sans-serif; } */
 h2 {
     color: #272F32;
     margin: 6px 0 2px;
-	font-family:"PeoplePower";
+	font-family:"proxima-nova";
 }
 h3 {
     color: #537882;
 	font-weight:400;font-size:2em;
-	font-family:"PeoplePower";
+	font-family:"proxima-nova";
 }
 /* Used for paragraphs */
 p {
@@ -2800,7 +2799,7 @@ p {
 	border-radius:0;
 	background-color:#EF4134;
 	color:#FFF;
-	font-family:"PeoplePower";
+	font-family:"proxima-nova";
 	text-transform: uppercase;
 	font-weight:500;
 	font-size:2em;
@@ -2900,7 +2899,7 @@ width:100%;display:block; float:none;clear:both;
 p.ak-event-title { line-height:40px;padding-top:10px; }
 p.ak-event-title a { 
 /* color:#537882; */
-font-family:"PeoplePower";
+font-family:"proxima-nova";
 font-weight:400;
 }
 p.ak-event-title a { font-size:2.3em; }
@@ -2946,9 +2945,8 @@ background-color:#ef4134;
 .textBlue { color: #537983; }
 .textCyan { color: #9ec0c5; }
 .textRed { color: #ef3030; }
-.textA { font-family: PeoplePower, sans-serif; font-size: 34px; line-height: 30px; font-weight: 600; }
-.textB { font-family: PeoplePower, sans-serif; font-size: 20px; line-height: 20px; font-weight: 600; margin-bottom: 10px; text-align: center;}
-.icon-mapmarker { background: url(https://peoplepower.org/assets/icon-mapmarker.svg) no-repeat; background-size: contain; text-indent: 25px; }
+.textA { font-family: "proxima-nova", sans-serif; font-size: 34px; line-height: 30px; font-weight: 600; }
+.textB { font-family: "proxima-nova", sans-serif; font-size: 20px; line-height: 20px; font-weight: 600; margin-bottom: 10px; text-align: center;}
 /* === */
 .banding-black { background: #000; padding: 20px 0; margin-bottom: 20px;}
 	@media only screen and (min-width: 750px) { .banding-black { margin-bottom: 40px; }}
@@ -2965,7 +2963,7 @@ background-color:#ef4134;
     border-radius: 0;
     background-color: #EF4134;
     color: #FFF;
-    font-family: "PeoplePower";
+    font-family: "proxima-nova";
     text-transform: uppercase;
     font-weight: 500;
     font-size: 26px;
@@ -2984,7 +2982,7 @@ background-color:#ef4134;
     width: 100%;
     background-color: #000;
     color: #FFF;
-    font-family: "PeoplePower";
+    font-family: "proxima-nova";
     text-transform: uppercase;
     font-weight: 500;
     font-size: 26px;
@@ -2999,19 +2997,14 @@ background-color:#ef4134;
 .buttonA3 .box { display: block; max-width: 230px; margin: 0 auto; }
 .buttonA3.icon-fb { background: #3b5998; }
 .buttonA3.icon-fb:hover { background: #293d67; }
-.buttonA3.icon-fb .icon { display: inline-block; width: 30px; height: 30px; background: url('https://peoplepower.org/assets/icon-fb.svg') no-repeat; background-size: contain; vertical-align: top; margin: 8px 12px 0 0; }
 .buttonA3.icon-twitter { background: #0084b4; }
 .buttonA3.icon-twitter:hover { background: #005f82; }
-.buttonA3.icon-twitter .icon { display: inline-block; width: 35px; height: 30px; background: url('https://peoplepower.org/assets/icon-twitter.svg')  no-repeat; background-size: contain; vertical-align: top; margin: 8px 10px 0 0; }
 .buttonA3.icon-mapmarker { background: #000; text-indent: 0; }
 .buttonA3.icon-mapmarker:hover { background: #9ec0c5; }
-.buttonA3.icon-mapmarker .icon { display: inline-block; width: 30px; height: 30px; background: url('https://peoplepower.org/assets/icon-mapmarker-white.svg') no-repeat; background-size: contain; vertical-align: top; margin: 8px 10px 0 0; }
 .buttonA3.icon-email { background: #ef3030; }
 .buttonA3.icon-email:hover { background: #bb3328; }
-.buttonA3.icon-email .icon { display: inline-block; width: 38px; height: 30px; background: url('https://peoplepower.org/assets/icon-email-white.svg') no-repeat; background-size: contain; vertical-align: top; margin: 8px 10px 0 0; }
 .buttonA3.icon-home { background: #000; }
 .buttonA3.icon-home:hover { background: #bb3328; }
-.buttonA3.icon-home .icon { display: inline-block; width: 36px; height: 30px; background: url('https://peoplepower.org/assets/icon-home-white.svg') no-repeat; background-size: contain; vertical-align: top; margin: 8px 10px 0 0; }
 .buttonB1 { font-weight: bold; font-size: 12px; line-height: 20px; color: #000; text-transform: uppercase; display: inline-block; }
 .buttonB1:hover { color: #000; text-decoration: none; }
 
