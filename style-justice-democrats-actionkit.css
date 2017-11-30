@@ -1,36 +1,3 @@
-/* Fonts
-================================================================*/
-@font-face {
-    font-family: PeoplePower;
-    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Light.otf") format("opentype");;
-    font-weight: 200;
-}
-@font-face {
-    font-family: PeoplePower;
-    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Book.otf") format("opentype");;
-    font-weight: 300;
-}
-@font-face {
-    font-family: PeoplePower;
-    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Med.otf") format("opentype");;
-    font-weight: 400;
-}
-@font-face {
-    font-family: PeoplePower;
-    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Semi.otf") format("opentype");;
-    font-weight: 500;
-}
-@font-face {
-    font-family: PeoplePower;
-    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Bold.otf") format("opentype");;
-    font-weight: 600;
-}
-@font-face {
-    font-family: PeoplePower;
-    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Black.otf") format("opentype");;
-    font-weight: 700; 
-}
-
 /* ==========================================================================
    ak-modern.css
 
