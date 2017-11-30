@@ -3050,6 +3050,6 @@ background-color:#ef4134;
 .taf-form-subject span { display: block; float: left; width: 80%; }
 .taf-form-note { padding: 2px 0; border-bottom: 1px solid #ddd; }
 .taf-form-message { padding: 2px 0; border-bottom: 1px solid #ddd; }
-.event-tools .icon-cancel { background: url('https://peoplepower.org/assets/icon-cancel.svg') no-repeat; background-size: contain; text-indent: 25px; margin-right: 10px; }
-.event-tools .icon-email { background: url('https://peoplepower.org/assets/icon-email.svg') no-repeat; background-size: contain; text-indent: 33px; }
+.event-tools .icon-cancel { background: url('https://s3.amazonaws.com/ak-jd/images/icon-cancel.svg') no-repeat; background-size: contain; text-indent: 25px; margin-right: 10px; }
+.event-tools .icon-email { background: url('https://s3.amazonaws.com/ak-jd/images/icon-email.svg') no-repeat; background-size: contain; text-indent: 33px; }
 
