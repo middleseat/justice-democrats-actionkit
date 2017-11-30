@@ -1,0 +1,3095 @@
+/* Fonts
+================================================================*/
+@font-face {
+    font-family: PeoplePower;
+    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Light.otf") format("opentype");;
+    font-weight: 200;
+}
+@font-face {
+    font-family: PeoplePower;
+    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Book.otf") format("opentype");;
+    font-weight: 300;
+}
+@font-face {
+    font-family: PeoplePower;
+    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Med.otf") format("opentype");;
+    font-weight: 400;
+}
+@font-face {
+    font-family: PeoplePower;
+    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Semi.otf") format("opentype");;
+    font-weight: 500;
+}
+@font-face {
+    font-family: PeoplePower;
+    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Bold.otf") format("opentype");;
+    font-weight: 600;
+}
+@font-face {
+    font-family: PeoplePower;
+    src: url("https://peoplepower.org/assets/fonts/FreightSansCmpPro-Black.otf") format("opentype");;
+    font-weight: 700; 
+}
+
+/* ==========================================================================
+   ak-modern.css
+
+   Starts with recent version of normalize.css -- make no changes here --
+   then ActionKit styles follow.
+   ========================================================================== */
+
+/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
+
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+
+article,
+aside,
+details, /* 1 */
+figcaption,
+figure,
+footer,
+header,
+main, /* 2 */
+menu,
+nav,
+section,
+summary { /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+
+template, /* 1 */
+[hidden] {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  color: #268ECD;
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+
+a:active,
+a:hover {
+  outline-width: 0;
+  color: #31a8f0;
+}
+
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+
+optgroup {
+  font-weight: 600;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+address {
+    font-style: normal;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+
+
+
+/* ==========================================================================
+   ActionKit specific styles start here
+   ========================================================================== */
+
+
+/* Box sizing: use border-box throughout
+   ========================================================================== */
+
+* {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+/* RTL: Set for RTL languages
+   ========================================================================== */
+
+.ak-rtl {
+    direction: rtl;
+}
+
+
+/* Page Structure
+   ========================================================================== */
+
+body {
+    color: #4b4b4b;
+}
+
+.ak-page-container {
+    margin: 0 auto;
+    width: 100%;
+}
+.ak-page-header-contents {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+.ak-page-header {
+	text-align: center;
+	padding: 0;
+    line-height: 1;
+}
+.ak-page-header h1 {
+    font-size: 32px;
+    margin-left: 0;
+    height: 60px;
+    vertical-align: center;
+    padding-top: 12px;
+    margin-top: 0;
+}
+.ak-page-header img {
+	max-width:325px;
+	width:100%;
+	margin:15px auto;
+}
+
+div.ak-page-container {
+    background: #fff;
+    padding-bottom: 1.5em;
+}
+
+.ak-page-footer {
+    text-align: right;
+    border-top: 1px solid #efefef;
+    margin-top: 10px;
+    width: 100%;
+    clear: both;
+}
+
+.ak-page-footer-contents {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.ak-page-footer-contents a {
+    text-decoration: none;
+}
+.ak-page-footer-contents a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 750px) {
+   .ak-page-header-contents {
+       padding-left: 60px;
+       padding-right: 60px;
+       width: 1000px;
+       max-width: 100%;
+    }
+}
+
+img.ak-featured-img {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/* Grid system based on https://www.responsivegridsystem.com/calculator/
+   ========================================================================== */
+
+.ak-grid-row:before, .ak-grid-row:after { content: ""; display: table; }
+.ak-grid-row:after { clear: both; }
+.ak-grid-row { zoom: 1; /* For IE 6/7 */ clear: both; padding: 0; padding: 0 15px; }
+	@media (min-width: 750px) { .ak-grid-row { margin: 0 auto; width: 1000px; max-width: 100%; } }
+.ak-grid-col { display: block; float: left; margin: 0; min-height: 1px; }
+.ak-grid-col-12-of-12 { width: 100%; }
+.ak-grid-col-11-of-12 { width: 91.5%; }
+.ak-grid-col-10-of-12 { width: 83%; }
+.ak-grid-col-9-of-12 { width: 74.5%; }
+.ak-grid-col-8-of-12 { width: 66%; }
+.ak-grid-col-7-of-12 { width: 57.5%; }
+.ak-grid-col-6-of-12 { width: 49%; }
+.ak-grid-col-5-of-12 { width: 40.5%; }
+.ak-grid-col-4-of-12 { width: 32%; }
+.ak-grid-col-3-of-12 { width: 23.5%; }
+.ak-grid-col-2-of-12 { width: 15%; }
+.ak-grid-col-1-of-12 { width: 6.5%; }
+.ak-grid-col:first-child { margin-left: 0; }
+.ak-grid-col:not(:first-child) { margin-left: 2%; }
+.ak-grid-col.ak-grid-centered { margin: 0 auto; float: none; }
+/* Inverted grid rows have their cells in reverse order */
+.ak-grid-row-inverted .ak-grid-col { float: right; }
+.ak-grid-row-inverted .ak-grid-col:last-child { margin-left: 0; }
+.ak-grid-row-inverted .ak-grid-col:not(:last-child) { margin-left: 2%; }
+/* On RTL pages, all of the above column order logic is switched */
+.ak-rtl .ak-grid-row .ak-grid-col { float: right; }
+.ak-rtl .ak-grid-row .ak-grid-col:last-child { margin-left: 0; }
+.ak-rtl .ak-grid-row .ak-grid-col:not(:last-child) { margin-left: 2%; }
+.ak-rtl .ak-grid-row-inverted .ak-grid-col { float: left; }
+.ak-rtl .ak-grid-row-inverted .ak-grid-col:first-child { margin-left: 0; }
+.ak-rtl .ak-grid-row-inverted .ak-grid-col:not(:first-child) { margin-left: 2%; }
+/* Switch to single-column full-width layout on screens narrower than 750 px */
+@media only screen and (max-width: 749px) {
+    .ak-grid-col { width: 100%; margin: 0; }
+    .ak-grid-col:not(:first-child),
+    .ak-grid-row-inverted .ak-grid-col:not(:last-child),
+    .ak-rtl .ak-grid-row .ak-grid-col:not(:last-child),
+    .ak-rtl .ak-grid-row-inverted .ak-grid-col:not(:first-child) { margin: 0; }
+}
+
+
+/* Display Breakpoints */
+
+.ak-mobile { display: block; }
+	@media screen and (min-width: 480px) { .ak-mobile { display: none; } }
+	@media screen and (max-width: 479px) { .ak-hide-under-480 { display: none !important; } }
+	@media screen and (min-width: 480px) { .ak-hide-over-480 { display: none !important; } }
+	@media screen and (max-width: 749px) { .ak-hide-under-750 { display: none !important; } }
+	@media screen and (min-width: 750px) { .ak-hide-over-750 { display: none !important; } }
+
+/* Typography
+   ========================================================================== */
+/* AK related fixes */
+abbr[title] { border-bottom: none; /* 1 */ text-decoration: underline; /* 2 */ text-decoration: underline dotted; /* 2 */ } /* 1. Remove the bottom border in Firefox 39-. 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
+b, strong { font-weight: inherit; font-weight: 600;} /* Add the correct font weight in Chrome, Edge, and Safari.  */
+dfn { font-style: italic; } /* Add the correct font style in Android 4.3-. */
+mark { background-color: #ff0; color: #000; } /* Add the correct background and color in IE 9-. */
+small { font-size: 80%; } /* Add the correct font size in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; } /* Prevent `sub` and `sup` elements from affecting the line height in all browsers. */
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+img { border-style: none; } /* Remove the border on images inside links in IE 10-. */
+svg:not(:root) { overflow: hidden; } /* Hide the overflow in IE. */
+code, kbd, pre, samp { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ } /* 1. Correct the inheritance and scaling of font size in all browsers. 2. Correct the odd `em` font sizing in all browsers. */
+figure { margin: 1em 40px; } /* Add the correct margin in IE 8. */
+hr { box-sizing: content-box; /* 1 */ height: 0; /* 1 */ overflow: visible; /* 2 */ } /* 1. Add the correct box sizing in Firefox. 2. Show the overflow in Edge and IE. */
+
+html {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    font-size: 15.5px;
+    font-weight: 300;
+	line-height: 22px; 
+}
+/*
+    With HTML base font of 15.5px
+    font-size: 0.58rem  =   9px
+    font-size: 0.84rem  =  13px
+    font-size: 0.90rem  =  14px
+    font-size: 1.00rem  =  15.5px
+    font-size: 1.10rem  =  17px
+    font-size: 1.16rem  =  18px
+    font-size: 1.29rem  =  20px
+    font-size: 1.35rem  =  21px
+    font-size: 1.42rem  =  22px
+    font-size: 1.48rem  =  23px
+    font-size: 1.55rem  =  24px
+    font-size: 1.93rem  =  30px
+*/
+
+p { margin: 10px 0; line-height: 1.5; }
+.ak-normal { font-weight: 400; }
+.ak-p-before-textarea { font-weight: 600; }
+.ak-p-before-textarea p { margin-bottom: 2px; }
+b, strong { font-weight: 600; }
+.ak-faded-text { color: #909090; }
+.ak-small-header { font-size: 0.84em; font-size: 0.84rem; font-weight: 200; text-transform: uppercase; }
+.ak-small { font-size: 0.84em; font-size: 0.84rem; font-weight: 400; }
+.ak-instructions { font-size: 0.84em; font-size: 0.84rem; line-height: 1.3; margin-top: 4px; }
+p.ak-large-text { font-size: 1.29em; font-size: 1.29rem; font-weight: 200; }
+.ak-full-address { white-space: pre-line; }
+/* Links that are only underlined on hover */
+a.ak-underline-on-hover {text-decoration: none; }
+a.ak-underline-on-hover:hover { text-decoration: underline; }
+/* Links that look like plain text until hover */
+a.ak-highlight-on-hover { text-decoration: none; color: #4b4b4b; }
+a.ak-highlight-on-hover:hover { text-decoration: underline; color: #31a8f0; }
+/* Used for site title */
+h1 { font-size: 2em; margin: 0.67em 0; font-weight: 600; }
+/* Used for page title */
+h2 { font-size: 48px; line-height: 50px; font-weight: 700; color: #272F32; }
+	@media screen and (min-width: 600px) { h2 { margin: 24px 0 10px; } }
+/* Used for page section headings */
+h3 { font-size: 22px; line-height: 30px; font-weight: 200; margin: 18px 0 4px; /* new margins for event create. double check it's ok elsewhere. if not, add body.ak-pagetype-event_create to the 2nd margin line & uncomment the 1st.... */ }
+/* Used for subheadings on groups of related fields, eg donation form */
+h4 { font-size: 16px; line-height: 20px; font-weight: 600; margin: 10px 0 4px; }
+/* Used for small headings */
+h5 { font-weight: 200; text-transform: uppercase; margin: 10px 0; }
+.subA { font-family: PeoplePower; font-weight: 600; text-transform: uppercase; font-size: 20px; line-height: 20px; color: #000; border-bottom: 2px solid #000; margin-bottom: 20px; }
+.subB { font-weight: 600; }
+ol { padding: 0 0 0 15px; }
+ol li { margin-bottom: 20px; }
+
+
+/* Alignment
+   ========================================================================== */
+
+.ak-pull-right { float: right; }
+.ak-pull-left { float: left; }
+.ak-align-right { text-align: right; }
+.ak-align-left { text-align: left; }
+.ak-grid-col img { max-width: 100%; }
+
+
+/* Spacing
+   ========================================================================== */
+
+.ak-full-width { width: 100%; }
+.ak-margin-1 { margin: 10px 0; }
+.ak-margin-2 { margin: 20px 0; }
+.ak-margin-top-1 { margin-top: 10px; }
+.ak-margin-top-2 { margin-top: 20px; }
+.ak-margin-top-3 { margin-top: 30px; }
+.ak-margin-bottom-5 { margin-bottom: 5px; }
+.ak-margin-bottom-1 { margin-bottom: 10px; }
+.ak-margin-bottom-2 { margin-bottom: 20px; }
+.ak-margin-bottom-3 { margin-bottom: 30px; }
+.ak-margin-noe { margin: 0; }
+
+.ak-display-inline-block { display: inline-block; }
+.ak-nodisplay { display: none; }
+.ak-overflow { overflow: auto; }
+.ak-inline { display: inline; }
+.ak-unstyled { list-style: none; }
+
+
+/* Clearfix
+   ========================================================================== */
+.ak-clearfix:before,
+.ak-clearfix:after { content: ""; display: table; }
+.ak-clearfix:after { clear: both; }
+.ak-clearfix { zoom: 1; /* For IE 6/7 */ clear: both; }
+
+
+/* JavaScript CSS hooks for actionkit.js
+   ========================================================================== */
+
+body.js form.ak-form {
+    display: none
+}
+
+body.js .ak-nodisplay-if-js { display: none; }
+body.js .nojs { display: none; }
+.ifjs { display: none; }
+.if-js { display: none; }
+body.js .if-js { display: block; }
+body.js a.if-js,
+body.js span.if-js,
+body.js input.if-js { display: inline; }
+body.js .iblock-if-js { display: inline-block; }
+body.js li.if-js { display: list-item; }
+
+
+/* ==========================================================================
+   Form Styles
+   ========================================================================== */
+
+
+/* Forms
+   ========================================================================== */
+
+.ak-styled-fields input[type="text"],
+.ak-styled-fields input[type="email"],
+.ak-styled-fields input[type="password"],
+.ak-styled-fields input[type="number"],
+.ak-styled-fields input[type="tel"],
+.ak-styled-fields input[type="date"],
+.ak-styled-fields input[type="url"],
+.ak-styled-fields input[type="search"],
+.ak-styled-fields textarea,
+.ak-styled-fields select {
+    padding: 7px 7px;
+    border: 1px solid #ccc;
+    /* font-size: 1.0em; */
+    /* font-size: 1.0rem; */
+    background: #F7F7F7;
+    color: #4b4b4b;
+    font-weight: normal;
+    margin-bottom: 6px;
+    margin-top: 0;
+    font-weight: 400;
+    width: 100%;
+}
+
+.ak-styled-fields select {
+    min-height: 38px;
+}
+
+.ak-styled-fields textarea {
+    display: block;
+    min-height: 7.5em;
+    resize: vertical;
+}
+
+.ak-styled-fields textarea.ak-large-message {
+    min-height: 10.5em;
+}
+
+.ak-styled-fields select[multiple] {
+    height: 100%;
+}
+
+.ak-styled-fields input[type="checkbox"],
+.ak-styled-fields input[type="radio"],
+.ak-styled-fields textarea,
+div.checkbox-item,
+div.radio-item {
+    /* font-size: 1.0em; */
+    /* font-size: 1.0rem; */
+    line-height: 1.5;
+}
+
+.ak-styled-fields label {
+    font-weight: normal;
+}
+
+.ak-styled-fields label p {
+    margin-top: 0;
+}
+
+.ak-radio-set .ak-radio-choice,
+.ak-checkbox-set .ak-checkbox-choice,
+.ak-survey-radio-choice,
+.ak-survey-checkbox-choice,
+.ak-userfield-radio-set .ak-userfield-radio-choice,
+.ak-userfield-checkbox-set .ak-userfield-checkbox-choice {
+    font-weight: 400;
+}
+
+.ak-styled-fields input[name="zip"],
+.ak-styled-fields input[name="event_zip"] {
+    width: 50%;
+}
+
+
+/* Labels above */
+
+.ak-labels-above {
+    position: relative
+}
+
+.ak-labels-above input,
+.ak-labels-above select,
+.ak-labels-above textarea,
+.ak-no-js .ak-labels-overlaid input,
+.ak-no-js .ak-labels-overlaid select,
+.ak-no-js .ak-labels-overlaid textarea {
+    margin-top: 0px;
+}
+
+.ak-labels-above label,
+.ak-labels-above .ak-checkbox-field,
+.ak-label-above,
+.ak-no-js .ak-labels-overlaid label {
+    display: block;
+    margin: 0.5em 0 2px;
+}
+
+.ak-labels-above .ak-radio-set .ak-radio-choice,
+.ak-labels-above .ak-checkbox-set .ak-checkbox-choice,
+.ak-labels-above .ak-userfield-radio-set .ak-userfield-radio-choice,
+.ak-labels-above .ak-userfield-checkbox-set .ak-userfield-checkbox-choice {
+    display: inline-block;
+    padding-left: 1.3em;
+    text-indent: -1.3em;
+}
+
+
+/* Labels before */
+
+.ak-labels-before {
+    overflow: auto;
+}
+
+.ak-labels-before label {
+    text-align: left;
+}
+
+.ak-styled-fields.ak-labels-before input[name="zip"],
+.ak-styled-fields.ak-labels-before input[name="event_zip"],
+.ak-styled-fields.ak-labels-before input[name="plus4"] {
+    width: 33%;
+}
+
+/* labels to left (right if RTL) */
+.ak-labels-before label {
+    width: 35%;
+    float: left;
+    display: inline-block;
+    text-align: right;
+    position: relative;
+    top: 11px;
+    padding-right: 12px;
+    font-size: 0.90em;
+    font-size: 0.90rem;
+    white-space: normal;
+    line-height: 1.3;
+}
+
+@media screen and (min-width: 480px ){
+    .ak-labels-before label {
+        font-size: 1.00em;
+        font-size: 1.00rem;
+        top: 9px;
+    }
+    .ak-labels-before label span {
+        white-space: normal;
+    }
+}
+
+.ak-labels-before input[type="text"],
+.ak-labels-before input[type="email"],
+.ak-labels-before input[type="password"],
+.ak-labels-before input[type="number"],
+.ak-labels-before input[type="tel"],
+.ak-labels-before input[type="date"],
+.ak-labels-before input[type="url"],
+.ak-labels-before input[type="search"],
+.ak-labels-before select,
+.ak-labels-before textarea,
+.ak-labels-before .ak-readonly-value,
+.ak-labels-before .ak-radio-set,
+.ak-labels-before .ak-checkbox-set,
+.ak-labels-before .ak-userfield-radio-set,
+.ak-labels-before .ak-userfield-checkbox-set,
+.ak-labels-before .ak-datetime,
+.ak-labels-before .ak-err {
+    width: 65%;
+    /* float: left; */
+}
+.ak-labels-before .ak-readonly-value {
+    padding: 8px 5px;
+    margin-bottom: 3px;
+    word-wrap: break-word;
+    display: inline-block;
+}
+
+.ak-labels-before .ak-radio-set,
+.ak-labels-before .ak-checkbox-set,
+.ak-labels-before .ak-userfield-radio-set,
+.ak-labels-before .ak-userfield-checkbox-set {
+    clear: none;
+    display: inline-block;
+    padding-top: 9px;
+}
+
+.ak-labels-before .ak-radio-set .ak-radio-choice,
+.ak-labels-before .ak-checkbox-set .ak-checkbox-choice,
+.ak-labels-before .ak-userfield-radio-set .ak-userfield-radio-choice,
+.ak-labels-before .ak-userfield-checkbox-set .ak-userfield-checkbox-choice {
+    display: inline-block;
+    position: static;
+    float: none;
+    text-align: left;
+    width: auto;
+    padding-left: 1.3em;
+    text-indent: -1.3em;
+    padding-bottom: 9px;
+}
+
+/* Ensure that long labels which wrap don't overflow onto other fields/labels */
+.ak-labels-before > * { clear: both; }
+/* .ak-labels-before .ak-err-below { clear: both; } */
+.ak-labels-before div { clear: left; }
+/* .ak-labels-before div { overflow: auto; overflow-y: hidden; } */
+
+/* Make this more selective to not match custom field checkboxes/radios */
+.ak-labels-before-colon label:after { content: ":"; }
+
+.ak-rtl .ak-labels-before label { /* mirror the styles if RTL */
+    float: right;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 12px;
+}
+
+.ak-rtl .ak-labels-before .ak-radio-set .ak-radio-choice,
+.ak-rtl .ak-labels-before .ak-checkbox-set .ak-checkbox-choice,
+.ak-rtl .ak-labels-before .ak-userfield-radio-set .ak-userfield-radio-choice,
+.ak-rtl .ak-labels-before .ak-userfield-checkbox-set .ak-userfield-checkbox-choice {
+    text-align: right;
+}
+
+
+/* Labels overlaid */
+
+.ak-labels-overlaid,
+.ak-labels-overlaid > div {
+    position: relative;
+}
+
+.ak-labels-overlaid input[type="radio"],
+.ak-labels-overlaid input[type="checkbox"] {
+    width: auto;
+}
+
+.ak-labels-overlaid textarea {
+    vertical-align: top;
+}
+
+.ak-labels-overlaid label.ak-is-overlaid {
+    color: #4b4b4b;
+}
+
+.ak-labels-overlaid label.ak-is-overlaid:not(.has-content) + select.ak-has-overlay {
+    font-weight: 600;
+}
+
+.ak-labels-overlaid label.ak-is-overlaid,
+.js .ak-labels-overlaid select {
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+.js .ak-labels-overlaid label.ak-is-overlaid {
+    position: absolute;
+    z-index: 1;
+    padding: 8px 8px;
+    line-height: 1.4;
+}
+
+.ak-labels-overlaid label.ak-is-overlaid.active {
+    color: #909090;
+}
+
+.js .ak-labels-overlaid label.has-content {
+    display: none;
+}
+
+
+/* Other common form elements
+   ========================================================================== */
+
+#known_user,
+.known_user {
+    display: none;
+}
+
+.ak-inline-taf-preview {
+    border: 1px solid #808080;
+    padding: 5px;
+}
+
+/* Used in labels for required fields */
+.ak-required-flag {}
+
+/* Custom user form field */
+.ak-userfield-radio-set,
+.ak-userfield-checkbox-set {
+    display: inline-block;
+}
+
+.ak-styled-fields label.ak-radio-choice,
+.ak-styled-fields label.ak-checkbox-choice,
+.js .ak-labels-overlaid label.ak-radio-choice,
+.js .ak-labels-overlaid label.ak-checkbox-choice
+.ak-styled-fields label.ak-userfield-radio-choice,
+.ak-styled-fields label.ak-userfield-checkbox-choice,
+.js .ak-labels-overlaid label.ak-userfield-radio-choice,
+.js .ak-labels-overlaid label.ak-userfield-checkbox-choice {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    text-align: left;
+    padding: 0;
+    margin: 0 0.5em 0.2em 0;
+}
+
+/* Checkboxes */
+label.has-content.ak-checkbox-label {
+    margin-left: 10px;
+    padding-top: 2px;
+}
+
+/* Custom action fields */
+div[id^="ak-fieldbox"] {
+    position: relative;
+    font-weight: 600;
+    display: block;
+    padding-bottom: 0px;
+	clear:both;
+}
+
+
+/* Subscription Consent -- Used in Canada
+   ========================================================================== */
+
+/* Explicit opt-in checkbox styles */
+#id_subscription_consent_box,
+#ak-fieldbox-subscription_consent {
+    display: none;
+}
+#id_subscription_consent {
+    display: inline;
+    width: auto;
+}
+#id_subscription_consent_box label {
+    display: inline;
+    position: static;
+    color: inherit;
+}
+#id_subscription_consent_more {
+    display: none;
+}
+#ak-fieldbox-subscription_consent label[for="id_subscription_consent"] {
+    padding: 1px 0px 0px 20px;
+}
+span#id_subscription_consent_more_lnk {
+    display: block;
+}
+
+
+/* Errors
+   ========================================================================== */
+
+/* Error and confirmation blocks */
+#ak-errors,
+#ak-confirmation,
+#ak-error-info,
+.ak-errors,
+.ak-confirmation,
+.ak-error-info {
+    display: none
+}
+
+form.contains-errors #ak-errors,
+form.contains-errors #ak-error-info,
+form.contains-errors .ak-errors,
+form.contains-errors .ak-error-info {
+    display: block;
+}
+
+#ak-errors,
+#ak-confirmation,
+.ak-errors,
+.ak-confirmation {
+    list-style-type: none;
+    font-weight: 200;
+    padding: 7px 12px;
+    margin: 7px 0;
+}
+
+ul#ak-errors li,
+ul.ak-errors li {
+    padding: 0;
+    margin: 0;
+}
+
+.ak-color-error {
+    color: #d00;
+}
+
+#ak-errors,
+.ak-errors {
+    background-color: #ffe6e6;
+    color: #ef4134;
+    font-weight: 200;
+}
+#ak-confirmation,
+.ak-confirmation {
+    background-color: #668d24;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* Fields with error conditions */
+.ak-styled-fields input[type="text"].ak-error,
+.ak-styled-fields input[type="password"].ak-error,
+.ak-styled-fields input[type="number"].ak-error,
+.ak-styled-fields input[type="email"].ak-error,
+.ak-styled-fields textarea.ak-error,
+.ak-styled-fields select.ak-error,
+input.ak-error,
+select.ak-error,
+textarea.ak-error {
+    background-color: #ffe6e6;
+    border-color: #d00;
+}
+
+span.ak-error,
+label.ak-error,
+.ak-labels-overlaid input.ak-error,
+.ak-labels-overlaid label.ak-error,
+.ak-labels-before label.ak-error,
+.ak-styled-fields select.ak-error {
+    color: #d00;
+    font-weight: 600;
+}
+
+/* Inline errors */
+.ak-err {
+    color: #d00;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ak-err li {
+    line-height: 1.4;
+}
+
+.ak-err-above .ak-err {
+    margin-top: 0.25em;
+}
+.ak-err-below .ak-err {
+    margin-top: -4px;
+    margin-bottom: 12px;
+}
+
+/* Old-style Django server-generated errors */
+ul.errorlist.ak-errors,
+ul.errorlist li {
+    background: transparent;
+    color: #d00;
+    padding: 0;
+}
+.ak-labels-before ul.errorlist.ak-errors,
+.ak-labels-before ul.ak-err {
+    margin-left: 35%;
+}
+
+
+/* ==========================================================================
+   Layout Components
+   ========================================================================== */
+
+
+/* Buttons
+   ========================================================================== */
+
+button,
+input[type="submit"],
+a.ak-button,
+.ak-button {
+    background: #007bc5;
+    color: #fff;
+    height: 38px;
+    font-size: 1.35em;
+    font-size: 1.35rem;
+    font-weight: 200;
+    margin: 10px auto;
+	width:100%;
+    border: none;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 0 20px;
+    cursor: pointer;
+    text-align: center;
+}
+button:hover,
+input[type="submit"]:hover,
+a.ak-button:hover,
+.ak-button:hover {
+    background-color: #31a8f0;
+}
+button,
+input[type="submit"] {
+    display: block;
+}
+a.ak-button,
+.ak-button {
+    display: inline-block;
+    text-decoration: none;
+    padding-top: 4px;
+}
+a.ak-button:hover,
+.ak-button:hover {
+    color: #fff;
+    /* text-decoration: none; -- Unnecessary? */
+}
+
+a.ak-button.ak-full-width {
+    display: block;
+    width: 100%;
+}
+
+button.ak-normal {
+    width: 280px;
+}
+
+.ak-submit-button {
+    display: block;
+    height: 42px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 0;
+    font-size: 1.48em;
+    font-size: 1.48rem;
+    line-height: 1.3;
+}
+
+
+.ak-btn-short,
+input[type="submit"].ak-btn-short {
+    height: 27px;
+    margin: 10px 10px 10px 0;
+    padding: 0 20px;
+    font-size: 1.00em;
+    font-size: 1.00rem;
+    font-weight: 400;
+    border: none;
+    width: auto;
+    display: inline-block;
+}
+
+.ak-btn-search,
+input[type="submit"].ak-btn-search {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+
+/* Used when previewing a page from within the admin */
+#actionkit-preview-toolbar input[type="submit"] {
+    display: inline-block;
+}
+
+
+/* Share Buttons -- Used on thanks page
+   ========================================================================== */
+
+a.ak-share-button {
+    width: 100%;
+    height: 60px;
+    display: block;
+    font-size: 1.42em;
+    font-size: 1.42rem;
+    font-weight: 200;
+    margin: 0 0 20px;
+    padding: 16px;
+    padding-left: 60px;
+    text-align: left;
+}
+.ak-share-button.ak-facebook {
+    background-color: #3B5998;
+    background-image: url("https://peoplepower.org/assets/icon-fb.svg");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: 20px;
+    background-position-y: 15px;
+}
+.ak-share-button.ak-facebook:hover {
+    background-color: #0e3996;
+}
+.ak-share-button.ak-twitter {
+    background-color: #4299FF;
+    background-image: url("https://peoplepower.org/assets/icon-twitter.svg");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: 20px;
+    background-position-y: 15px;
+}
+.ak-share-button.ak-twitter:hover {
+    background-color: #2589ff;
+}
+.ak-share-button.ak-email {
+    background-color: #007BC5;
+    background-image: url("/media/modern/envelope.svg");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: 20px;
+    background-position-y: 22px;
+}
+.ak-share-button.ak-email:hover {
+    background-color: #0067bc;
+}
+
+
+/* Accent box around a group of fields
+   ========================================================================== */
+
+.ak-field-box {
+/*     background: #f3f6f7; */
+    border: 1px solid #bdd5da;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+/*     padding: 10px 12px; */
+    margin-bottom: 10px;
+	overflow: hidden;
+}
+
+@media only screen and (max-width: 749px) {
+    .ak-field-box {
+        border: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        padding: 10px 15px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+.ak-field-box h3 {
+    font-size: 1.42em;
+    font-size: 1.42rem;
+    font-weight: 200;
+    margin: 0;
+}
+.ak-field-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ak-pagetype-event_attend .ak-field-box ul {
+	list-style-type: circle !important;
+	list-style:disc !important;
+	padding-left:2em;
+}
+
+.ak-field-box.ak-labels-overlaid label,
+.ak-labels-overlaid .ak-field-box {
+    padding: 8px 10px;
+}
+.ak-field-box input[type="text"],
+.ak-field-box input[type="password"],
+.ak-field-box input[type="number"],
+.ak-field-box textarea,
+.ak-field-box textarea,
+.ak-field-box select {
+    background: #fff;
+}
+
+/* Field box gets extra padding on survey pages */
+.ak-field-box-padded {
+    padding: 20px;
+}
+
+/* Some field boxes are square and borderless, eg petition, call/whip script */
+.ak-field-box-borderless {
+    border-radius: 0;
+    border: none;
+}
+
+/* If field box holds paragraphs, don't add their margin to its padding */
+.ak-field-box p:first-child {
+    margin-top: 0;
+}
+.ak-field-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Text expander provides "read more" link for long text
+   ========================================================================== */
+
+a.ak-read-more {
+    text-align: center;
+    border-top: 1px solid #ccc;
+    background: #e3e3e3;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 3px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+div.ak-text-expander {
+    max-height: none;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+div.ak-text-expander a.ak-read-more {
+    display: none;
+}
+
+div.ak-text-expander.ak-truncated {
+    overflow: hidden;
+    max-height: 4.5em;
+}
+
+div.ak-text-expander.ak-truncated a.ak-read-more {
+    display: block;
+}
+
+
+div.ak-text-expander p:first-child {
+    margin-top: 0px;
+}
+
+@media screen and (min-width: 480px) {
+    div.ak-text-expander.ak-truncated {
+        overflow: visible;
+        max-height: none;
+    }
+    div.ak-text-expander {
+        max-height: 100%;
+        overflow: visible;
+        margin-bottom: 10px;
+    }
+    div.ak-text-expander p:first-child {
+        margin-top: 10px;
+    }    
+}
+
+
+/* Miscelaneous
+   ========================================================================== */
+
+.ak-unstyled {
+    list-style: none;
+}
+
+div.ak-text-expander p:first-child {
+    margin-top: 0px;
+}
+
+div.ak-text-expander + a.ak-read-more {
+    display: none;
+}
+
+div.ak-text-expander.ak-truncated + .ak-read-more {
+    display: block;
+}
+
+@media screen and (min-width: 480px) {
+    div.ak-text-expander {
+        max-height: 100%;
+        overflow: visible;
+        margin-bottom: 10px;
+    }
+    div.ak-text-expander p:first-child {
+        margin-top: 10px;
+    }
+    div.ak-text-expander + a.ak-read-more {
+        display: none;
+    }
+}
+
+
+/* Progress Thermometer
+   ========================================================================== */
+
+.ak-progress-meter {
+    width: 100%;
+    margin: 10px 0 10px;
+}
+
+.ak-progress-meter .ak-progress-holder {
+    margin: 0;
+    width: 100%;
+    background: #e7e7e7;
+    padding: 3px;
+}
+
+.ak-progress-meter .ak-progress-meter-border {
+    border: 3px solid #fff;
+    padding: 0;
+}
+
+.ak-progress-meter .ak-progress-bar {
+    background: #884974;
+    height: 30px;
+}
+
+.ak-progress-meter .ak-progress-percent {
+    display: inline-block;
+    font-size: 1.93em;
+    font-size: 1.93rem;
+    line-height: 1;
+    font-weight: 600;
+    margin: 3px 10px 0 6px;
+    color: #884974;
+}
+.ak-progress-meter .ak-progress-goals {
+    display: inline-block;
+    font-size: 0.84em;
+    font-size: 0.84rem;
+    line-height: 1.1;
+    font-weight: 200;
+    margin-top: 4px;
+}
+
+.ak-progress-meter .ak-progress-actions {
+    font-weight: 600;
+}
+
+body.ak-pagetype-donate .ak-progress-meter {
+    margin-top: 0;
+}
+
+
+/* Message form table used for TAF, LTE, Invite and similar "email-like" forms
+   ========================================================================== */
+
+table.ak-message-form {
+    width: 100%;
+}
+
+table.ak-message-form th,
+table.ak-message-form td {
+    vertical-align: top;
+}
+
+table.ak-message-form th {
+    white-space: nowrap;
+    text-align: right;
+    padding-right: 0.5em;
+    padding-top: 8px;
+}
+
+table.ak-message-form textarea {
+    margin: 0;
+}
+
+table.ak-message-form .ak-readonly-value {
+    padding: 8px 2px;
+}
+
+.ak-rtl table.ak-message-form th { /* mirror the styles if RTL */
+    text-align: left;
+    padding-right: 0;
+    padding-left: 0.5em;
+}
+
+
+/* ==========================================================================
+   Non-Action-Page Screens
+   ========================================================================== */
+
+
+/* Password Reset Screen
+   ========================================================================== */
+
+body.ak-pagetype-reset ul.errorlist {
+    margin-top: 0;
+}
+
+
+/* Share / Thanks Screen
+   ========================================================================== */
+
+.ak-checkmark-icon {
+    position: relative;
+    top: 7px;
+}
+
+/* TAF */
+.ak-share-message {
+    background: #F7F7F7;
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    margin-top: 10px;
+    min-height: 200px;
+}
+
+#id_taf_emails {
+    min-height: 70px;
+}
+.ak-sharebox-tafsubject {
+    font-weight: 400;
+    padding: 0;
+}
+.ak-sendemail-opened {
+    color: #4b4b4b;
+    font-size: 1.42em;
+    font-size: 1.42rem;
+    position: relative;
+    top: -4px;
+    cursor: pointer;
+}
+
+.ak-sendemail-cancel {
+    float: right;
+}
+
+#ak-taf-form {
+    width: 100%;
+    margin: 0;
+    display: none;
+}
+
+#taf-preview {
+    width: 100%;
+}
+
+.taf-mailto {
+    clear: both;
+}
+
+#id_taf_body {
+    white-space: pre-wrap;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.taf_body {
+    border: solid rgb(128,128,128) 1px;
+    padding: 5px;
+}
+
+/* Share URL */
+.ak-share-url {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-top: 43px;
+    background: #F7F7F7;
+}
+.ak-share-url input {
+    border: none;
+    margin: 0;
+    width: 70%;
+    padding: 10px;
+    background: #F7F7F7;
+}
+span.ak-share-url-text {
+    background: #808080;
+    color: #fff;
+    padding: 10px;
+}
+
+
+/* ==========================================================================
+   Page-type Specific Styles
+   ========================================================================== */
+
+
+/* Survey Page
+   ========================================================================== */
+
+#ak-survey-questions .ak-styled-fields input[type="text"], .ak-styled-fields input[type="email"], .ak-styled-fields input[type="password"], .ak-styled-fields input[type="number"], .ak-styled-fields input[type="tel"], .ak-styled-fields input[type="date"], .ak-styled-fields input[type="url"], .ak-styled-fields input[type="search"], .ak-styled-fields textarea, .ak-styled-fields select {
+	font-weight:normal;
+}
+
+label.ak-survey-question-label {
+    font-size: 1.29em;
+    font-size: 1.29rem;
+    font-weight: bold;
+    margin: 17px 0 3px;
+    line-height: 1.3;
+    display: block;
+}
+.ak-survey-question-label { font-weight: bold; }
+.ak-field-box div:first-child label.ak-survey-question-label {
+    margin-top: 0;
+}
+
+.ak-pagetype-survey .ak-field-box-padded { padding-top:0; }
+.ak-pagetype-survey .ak-styled-fields input[name="zip"] { width:100%; }
+
+.ak-survey-radio-set, .ak-survey-question-label { float:none; clear:both; display:block;
+}
+
+.ak-survey-question-label { padding: 15px 0 8px 0;display:block;clear:both;float:none; }
+
+.ak-field-box div:first-child label.ak-survey-question-label {
+padding-top:0;
+}
+.ak-survey-radio-choice {padding-right:10px; }
+.ak-submit-button { margin-top:20px; }
+
+
+/* Accordion -- Used on LTE Page
+   ========================================================================== */
+
+.ak-accordion {}
+.ak-accordion ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+.ak-accordion ul li {
+    background: #f3f6f7;
+    padding: 13px 16px;
+    margin-bottom: 2px;
+}
+.ak-accordion ul li .ak-accordion-head {
+    cursor: pointer;
+}
+.ak-accordion .ak-accordion-head {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.16em;
+    font-size: 1.16rem;
+}
+.ak-accordion .ak-arrow {
+    position: relative;
+    top: 4px;
+}
+
+.ak-arrow,
+.ak-arrow-inline {
+    float: right;
+    font-size: 0.58em;
+    font-size: 0.58rem;
+    transition: 0.4s;
+}
+.ak-arrow-inline {
+    top: 6px;
+}
+li.active .ak-arrow,
+p.active .ak-arrow-inline,
+h3.active .ak-arrow  {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 12px;
+    left: 5px;
+}
+.ak-arrow:after,
+.ak-arrow-inline:after {
+    content: "\25B6 \FE0E";
+    color: #268ECD;
+}
+
+.ak-rtl .ak-arrow,
+.ak-rtl .ak-arrow-inline { /* mirror the styles if RTL */
+    float: left;
+}
+
+
+/* LTE Page
+   ========================================================================== */
+
+.ak-newspaper-row {
+    background: #EEEEEE;
+    margin-bottom: 5px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: 200;
+    font-size: 0.90em;
+    font-size: 0.90rem;
+}
+.ak-newspaper-row:nth-of-type(2n) {
+    /* background-color: #e7e7e7; */
+}
+
+.ak-newspaper-row a {
+    font-weight: 600;
+    font-size: 1.16em;
+    font-size: 1.16rem;
+    padding-bottom: 5px;
+}
+.ak-newspaper-row .ak-newspaper-choice {
+    float: right;
+    margin: 0;
+    font-size: 1.16em;
+    font-size: 1.16rem;
+    padding-top: 6px;
+}
+
+.ak-newspaper-row .ak-newspaper-choice input {
+    display: none;
+}
+
+#ak-newspaper-change {
+    font-size: smaller;
+    margin-left: 1em;
+}
+
+.ak-rtl .ak-newspaper-row .ak-newspaper-choice { /* mirror the styles if RTL */
+    float: left;
+}
+
+/* Petition Page
+   ========================================================================== */
+
+p.ak-petition-leadin,
+p.ak-petition-leadin + p {
+    font-weight: 600;
+}
+
+body.ak-pagetype-petition button.ak-submit-button {
+    width: 100%;
+    max-width: 360px;
+}
+@media (min-width: 750px) {
+    body.ak-pagetype-petition button.ak-submit-button {
+        max-width: initial;
+    }
+}
+div[id^="id_action_"] {
+    margin-bottom: 10px;
+}
+
+
+/* Letter Page
+   ========================================================================== */
+
+.ak-letter-text {
+    width: 100%;
+    padding: 10px;
+    background: #F7F7F7;
+    border: 1px solid #f7f7f7;
+    height: 300px;
+    line-height: 1.5;
+    border: 1px solid #D5D5D5;
+}
+
+
+/* Update, Cancel Recurring
+   ========================================================================== */
+
+body.ak-pagetype-recurring_cancel p,
+body.ak-pagetype-recurring_update p {
+    font-weight: 400;
+}
+
+body.ak-pagetype-recurring_update input#amount {
+    width: 8em;
+}
+
+#ak-change-amount p {
+    margin: 0px;
+}
+
+
+/* Targets -- Used on call and whipcount pages
+   ========================================================================== */
+
+.ak-target-area label,
+.target label {
+    line-height: 1.5;
+}
+
+.ak-target-contact {
+    display: block;
+    font-weight: 200;
+    font-size: 1.35em;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.ak-target-toggle label,
+span.local_toggle_label {
+    font-size: 0.90em;
+    font-size: 0.90rem;
+    font-weight: 400;
+}
+
+.ak-target-office,
+div.office {
+    display: none;
+    font-weight: 400;
+}
+
+.ak-target-phone,
+span.office_phone {
+    font-size: 0.90em;
+    font-size: 0.90rem;
+    font-weight: 400;
+}
+
+/* Hide "tel:" and fax number */
+.ak-target-phone .ak-target-label,
+span.office_phone_label,
+span.ak-target-fax,
+span.ak-target-separator {
+    display: none;
+}
+
+
+/* Steps -- Used on call and whipcount pages
+   ========================================================================== */
+
+.ak-steps-area h3 {
+    padding: 3px 0 1px;
+    font-size: 1.29em;
+    font-size: 1.29rem;
+    color: #000;
+}
+.ak-steps-area label.ak-step-label {
+    font-weight: 200;
+}
+.ak-steps-area h3 div.ak-step-number {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    display: inline-block;
+    font-size: 1.10em;
+    font-size: 1.10rem;
+    line-height: 1.52;
+    width: 1.52em;
+    height: 1.52em;
+    text-align: center;
+    background: #fff;
+    color: #4b4b4b;
+    position: relative;
+    top: -1px;
+    margin: 2px;
+}
+
+.ak-steps-area h3.clickable {
+    margin: 5px -15px 0;
+    padding-left: 13px;
+}
+.ak-steps-area h3.clickable,
+.ak-steps-area h3.clickable label,
+.ak-steps-area h3.clickable span,
+.ak-steps-area h3.clickable span span,
+.ak-steps-area h3.clickable div.ak-step-number,
+.ak-steps-area h3.clickable label div {
+    cursor: pointer;
+}
+.ak-steps-area h3 .ak-arrow-holder {
+    display: block;
+    color: #fff;
+    float: right;
+    padding-right: 10px;
+    position: relative;
+    top: 9px;
+}
+.ak-steps-area h3 .ak-arrow:after {
+    color: #fff;
+}
+
+@media (max-width:479px) {
+    .ak-steps-area h3 {
+        background: #4b4b4b;
+        color: #fff;
+        padding: 8px 5px 6px;
+    }
+    .ak-steps-area h3 ~ div {
+        display: none;
+    }
+}
+@media (min-width:480px) {
+    .ak-steps-area h3 label.ak-step-label {
+        color: #4b4b4b;
+    }
+    .ak-steps-area h3 div.ak-step-number {
+        /* border: 2px solid #fff; */
+        background: #4b4b4b;
+        color: #fff;
+    }
+    .ak-steps-area h3 .ak-arrow-holder {
+        display: none;
+    }
+    .ak-steps-area .ak-fieldbox {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.ak-steps-area .ak-fieldbox {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 15px;
+    padding: 0 15px;
+}
+.ak-steps-area .ak-fieldbox p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+body.ak-pagetype-call .ak-steps-area #ak-survey_question label p {
+    margin-top: 0;
+}
+h3#report-call label p {
+    margin: 10px 0 10px;
+}
+
+
+/* Call Page
+   ========================================================================== */
+
+#ak-need-contact-info {
+    margin-bottom: 10px;
+}
+
+#target_checkboxes .target {
+    margin-left: 1.25em;
+    text-indent: -1.25em;
+    line-height: 1.8;
+}
+
+.target input {
+    margin: 0;
+}
+
+body.ak-pagetype-call .ak-target-contact {
+    margin-left: 1.25em;
+}
+
+
+/* Whipcount Page
+   ========================================================================== */
+
+/* Whipcount result listing table  */
+#ak-whipcount-targets h3 {
+    /* border-bottom: 1px solid black; */
+    /* padding: 0 15px 10px 30px; */
+}
+
+#ak-whipcount-targets table {
+    width: 100%;
+    border-spacing: 0 5px;
+    overflow-x: auto;
+}
+#ak-whipcount-targets table th {
+    text-align: left;
+    font-weight: 200;
+    font-size: 1.00em;
+    font-size: 1.00rem;
+}
+#ak-whipcount-targets table th,
+#ak-whipcount-targets table td {
+    padding: 0 0 0 20px;
+}
+#ak-whipcount-targets table td:last-child {
+    padding-right: 20px;
+    text-align: right;
+}
+
+@media screen and (min-width:750px) {
+    #ak-whipcount-targets table th {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width:749px) {
+    .ak-whipcount-listing {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+/* mirror the styles if RTL */
+.ak-rtl #ak-whipcount-targets table th  { 
+    text-align: right;
+}
+
+.ak-rtl #ak-whipcount-targets table th,
+.ak-rtl #ak-whipcount-targets table td {
+    padding: 0 20px 0 0;
+}
+.ak-rtl #ak-whipcount-targets table td:last-child {
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* Contents of the table */
+#ak-whipcount-targets tbody tr {
+    background: #eeeeee;
+    height: 40px;
+}
+#ak-whipcount-targets tbody tr:nth-of-type(2n) {
+    /* background: #f0f0f0; */
+}
+#ak-whipcount-targets tbody tr .ak-target-name {
+    font-weight: 600;
+    font-size: 1.16em;
+    font-size: 1.16rem;
+}
+#ak-whipcount-targets tbody tr.ak-target-opposed {
+    background: #E3E3E3;
+}
+#ak-whipcount-targets tbody tr.ak-target-supportive {
+    background: #F7F7F7;
+}
+#ak-whipcount-targets tbody tr.ak-target-opposed span.ak-target-stance {
+    color: #CD2027;
+}
+#ak-whipcount-targets tbody tr.ak-target-supportive span.ak-target-stance {
+    color: #658F3D;
+}
+
+.ak-whipcount-icon {
+    display: inline-block;
+    top: 4px;
+    position: relative;
+}
+
+#ak-whipcount-targets tbody a.ak-button {
+    line-height: 1.3;
+    font-size: 1.16em;
+    font-size: 1.16rem;
+    padding: 5px 40px;
+    margin: 0;
+    height: auto;
+}
+
+@media screen and (max-width:749px) {
+   #ak-whipcount-targets tbody a.ak-button {
+           padding: 5px 15px;
+   }
+   .ak-whipcount-icon {
+       display: none;
+   }
+}
+
+/* Call form */
+.ak-whipcount-callbox {
+    margin-top: 10px;
+}
+body.ak-pagetype-whipcount #ak-report-call {
+    margin-top: 10px;
+}
+@media screen and (min-width:480px) {
+    .ak-whipcount-callbox {
+        margin-top: 0px;
+    }
+    body.ak-pagetype-whipcount #ak-report-call {
+        margin-top: 0px;
+    }
+}
+
+#who_to_call {
+    margin-left: 0;
+}
+
+.ak-whipcount-callbox {
+    border: 1px solid #CCC;
+    margin-bottom: 10px;
+}
+.ak-whipcount-callbox .ak-whipcount-boxhead {
+    background: #4B4B4B;
+    color: #fff;
+    padding: 10px;
+    height: auto;
+    font-weight: 600;
+}
+.ak-whipcount-callbox .ak-whipcount-boxhead .ak-target-phone {
+    font-size: 1.42em;
+    font-size: 1.42rem;
+    font-weight: 600;
+    margin: 0;
+}
+.ak-whipcount-callbox .ak-whipcount-boxbody {
+    padding: 10px;
+}
+
+
+/* Donation Page
+   ========================================================================== */
+
+/* Donation amount buttons */
+div#ak-amount-list {
+    overflow: auto;
+}
+div#ak-amount-list .ak-currency,
+div#ak-amount-list .ak-multi-currency,
+div#ak-amount-list .ak-amount-wrapper {
+    margin-top: 10px;
+}
+
+.ak-amount-wrapper {
+    text-align: center;
+    margin: 10px 0;
+}
+
+div#ak-amount-list .ak-amount-wrapper ul {
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+#ak-amount-list li {
+    cursor: pointer;
+}
+
+div#ak-amount-list .ak-amount-wrapper li {
+    display: block;
+    font-size: 1em;
+    font-weight: 200;
+    text-align: center;
+    width: 20%;
+    margin-right: 1%;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+div#ak-amount-list .ak-amount-wrapper ul li:last-of-type {
+    margin-right: 0;
+}
+
+#ak-amount-list li label {
+    cursor: pointer;
+    display: block;
+    padding: 15.5px 0;
+    width: 80px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 1;
+}
+
+div#ak-amount-list ul.ak-unstyled li label.ak-btn input[type="radio"] {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    div#ak-amount-list .ak-amount-wrapper li {
+        display: block;
+        font-size: 1.29em;
+        font-size: 1.29rem;
+        font-weight: 200;
+        text-align: center;
+        width: 23%;
+        margin-right: 1.5%;
+        margin-bottom: 8px;
+        padding: 0;
+    }
+}
+
+div#ak-amount-list #ak-other-amount-container {
+    height: 50px;
+}
+#ak-other-amount-container label {
+    height: 46px;
+}
+div#ak-amount-list #ak-other-amount-field {
+    height: 32px;
+    width: 62%;
+    position: relative;
+    top: -9px;
+    vertical-align: top;
+}
+
+@media screen and (min-width: 800px) {
+    #ak-other-amount-container label {
+        height: 47px;
+    }
+    div#ak-amount-list #ak-other-amount-field {
+        height: 38px;
+        width: 62%;
+    }
+}
+
+#ak-amount-list li label {
+    background: #d7d7d7;
+}
+
+#ak-amount-list li label:hover,
+#ak-amount-list li label.ak-radio-checked,
+div#ak-amount-list label[for="amount_other_field"].ak-radio-checked {
+    background: #FFC700;
+}
+
+div#ak-amount-list span.ak-currency {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+@media screen and (min-width:800px) {
+    #ak-amount-list li label {
+        width: 100px;
+    }
+}
+
+@media (min-width:760px) {
+    #ak-amount-list .ak-amount-wrapper li {
+        font-size: 1.42em;
+        font-size: 1.42rem;
+        margin-left: .1%;
+    }
+    #ak-amount-list .ak-amount-wrapper li label {
+        padding: 14px 0;
+    }
+}
+
+@media (min-width:800px) {
+    #ak-amount-list li {
+        margin-left: .2%;
+    }
+}
+
+#ak-amount-list .ak-err li {
+    width: auto;
+    background: none;
+}
+
+/* One-Time Or Recurring */
+div#ak-recurring-type {
+    text-align: center;
+}
+div#ak-recurring-type span {
+    display: inline-block;
+    margin: 15px 0 0 15px;
+}
+
+/* PayPal button */
+.ak-paypal-button {
+    background: none;
+    position: relative;
+    top: 6px;
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #f3f6f7;
+}
+.ak-paypal-button:hover {
+    background: none;
+    border: 1px solid #007bc5;
+}
+
+/* Payment fields */
+.ak-payment-options {
+    text-align: center;
+}
+#ak-exp_date_box,
+#ak-card_code_box {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 49%;
+}
+#ak-exp_date_box {
+    padding-right: 1em;
+}
+#ak-exp_date_month,
+#ak-exp_date_year {
+    display: inline;
+    width: auto;
+}
+
+/* Products and Campaigns */
+.ak-product-subtotal {
+    font-weight: 600;
+}
+.ak-product-subtotal,
+#ak-product-quantity-header {
+    text-align: right;
+}
+td.ak-product-quantity {
+    text-align: center;
+}
+.ak-product-quantity input[type="number"] {
+    text-align: right;
+}
+.ak-product-quantity input[type="number"],
+.ak-candidate-amount input[type="text"] {
+    width: 49px;
+}
+.ak-candidate-amount span.ak-currency-sym {
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 5px;
+}
+.ak-product-description {
+    font-size: 0.90em;
+    font-size: 0.90rem;
+    font-weight: 400;
+}
+td.ak-product-amount {
+    font-weight: 600;
+}
+#ak-donation-total-div label {
+    font-weight: 600;
+    font-size: 0.84em;
+    font-size: 0.84rem;
+}
+#ak-donation-total-amount {
+    margin-right: 5px;
+    font-size: 1.16em;
+    font-size: 1.16rem;
+}
+
+#ak-donation-details {
+    overflow: auto;
+}
+#ak-donation-details table {
+    width: 100%;
+}
+#ak-donation-details table tr th,
+#ak-donation-details table tr td {
+    text-align: left;
+    vertical-align: top;
+}
+#ak-donation-details table img {
+    max-width: 85px;
+}
+#ak-donation-details table .ak-candidate-name {
+    font-weight: 600;
+    vertical-align: top;
+}
+#ak-donation-details table .ak-candidate-name p {
+    font-weight: 400;
+}
+.ak-candidate-amount {
+    vertical-align: top;
+}
+
+#ak-candidate-amount-header,
+#ak-candidate-details-header  {
+    font-weight: 200;
+    text-transform: uppercase;
+}
+#ak-candidate-amount-header {
+    text-align: right;
+}
+
+.ak-product-name,
+#ak-donation-subtotal-amount {
+    font-weight: 600;
+}
+.ak-donation-subtotal label {
+    margin-right: 22px;
+}
+
+/* mirror the styles if RTL */
+.ak-rtl #ak-donation-details table tr th,
+.ak-rtl #ak-donation-details table tr td {
+    text-align: right;
+}
+
+.ak-rtl .ak-candidate-amount span.ak-currency-sym {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+/* Donation Totals */
+.ak-donation-total {
+    text-align: right;
+    text-transform: uppercase;
+}
+.ak-donation-total span.ak-currency-sym {
+    font-size: 1.16em;
+    font-size: 1.16rem;
+    font-weight: 600;
+}
+.currency_sym,
+#ak-donation-total-amount {
+    font-weight: 600;
+}
+.product-name {
+    font-weight: 600;
+}
+
+/* Three Step navigation menu */
+.ak-donate-menu {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ak-donate-menu label {
+    display: inline-block;
+    cursor: pointer;
+    width: 5.2em;
+}
+
+.ak-donate-step span { /* Step name */
+    display: block;
+    font-weight: 400;
+    margin-bottom: 1px;
+}
+
+.ak-donate-menu input { /* Radio button */
+    display: none;
+}
+
+.ak-donate-menu div.ak-step-number {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    display: inline-block;
+    font-size: 0.75em;
+    font-size: 0.75rem;
+    line-height: 1.725;
+    width: 1.725em;
+    height: 1.725em;
+    background: #909090;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+}
+
+.ak-donate-menu input:checked + div.ak-step-number {
+    background: #4b4b4b;
+}
+
+label.ak-donate-step:hover {
+    color: #31a8f0;
+}
+.ak-donate-menu input:checked + div.ak-step-number:hover,
+label.ak-donate-step:hover div.ak-step-number {
+    background: #31a8f0;
+}
+
+/* Currency selection */
+#ak-multi-currency {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#ak-multi-currency label {
+    font-weight: 600;
+}
+
+
+/* Events Pages
+   ========================================================================== */
+
+button.ak-event-search {
+    display: inline;
+    position: relative;
+    top: 2px;
+}
+
+p.ak-event-title a {
+    font-size: 1.42em;
+    font-size: 1.42rem;
+    font-weight: 200;
+    text-decoration: none;
+}
+.ak-event-title a:hover {
+    text-decoration: underline;
+}
+
+.ak-signoff-box {
+    background: #EEEEEE;
+    padding: 19px;
+    margin-bottom: 20px;
+}
+.ak-signoff-box blockquote {
+    padding-bottom: 19px;
+    border-bottom: 1px solid #fff;
+    margin: 0;
+    margin-bottom: 19px;
+}
+.ak-signoff-box blockquote p {
+    font-weight: 600;
+}
+.ak-signoff-box blockquote p:first-child {
+    margin-top: 0;
+}
+.ak-signoff-box blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+ul.ak-links-menu {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
+.ak-links-menu li {
+    display: inline-block;
+}
+.ak-links-menu li a {
+    text-decoration: none;
+}
+.ak-links-menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Used to display list of attendees */
+table.ak-data-table {
+    border-collapse: collapse;
+}
+table.ak-data-table td,
+table.ak-data-table th {
+    padding: 5px 15px 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+table.ak-data-table th {
+    text-align: left;
+}
+
+.ak-rtl table.ak-data-table th  { /* mirror the styles if RTL */
+    text-align: right;
+}
+
+/* Used to present event data like date and location */
+table.ak-event-table th {
+    text-align: right;
+    font-weight: 600;
+    white-space: nowrap;
+    vertical-align: top;
+    padding-right: 0.5em;
+}
+table.ak-event-table td {
+    vertical-align: top;
+}
+
+.ak-rtl table.ak-event-table th  { /* mirror the styles if RTL */
+    text-align: left;
+    padding-right: 0;
+    padding-left: 0.5em;
+}
+
+/* Map used to show events */
+#ak-map {
+    width: 100%;
+    float: right;
+    padding: 0;
+}
+#ak-map img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border: 1px solid #aaa;
+}
+#ak-map iframe {
+    min-height: 300px;
+}
+#ak-map .caption {
+    color: #4b4b4b;
+}
+
+.ak-rtl #ak-map { /* mirror the styles if RTL */
+    float: left;
+}
+
+div.event-signup {
+    zoom: 1; /* work around IE 8 content-hiding bug */
+}
+label[for="id_event_is_private"] {
+    top: -5px;
+}
+body.ak-pagetype-event_host_tools input[value="Send invitations"] {
+    margin: 0;
+}
+label.ak-checkbox-label.has-content[for="id_event_signup_ground_rules"] {
+    display: inline-block;
+    pointer-events: auto;
+}
+
+/* Hide these on event attend page. They show up on the event search results. */
+body.ak-pagetype-event_attend h2.ak-results-heading,
+body.ak-pagetype-event_attend a.ak-event-create,
+body.ak-pagetype-event_attendee_tools a.ak-event-create {
+    display: none;
+}
+
+/* From event_attendee_details.html */
+body.ak-pagetype-event_attendee_tools .event-address label {
+    float: left;
+    white-space: pre;
+}
+body.ak-pagetype-event_attendee_tools .event-address-content {
+    float: left;
+}
+
+
+/* Events fixes */
+.ak-submit-button,
+button,
+input[type="submit"] {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* label positioning on create event page */
+body.ak-pagetype-event_create .ak-labels-before label[for="id_event_is_private"] {
+    top: -5px;
+}
+body.ak-pagetype-event_create .ak-styled-fields textarea {
+    padding-top: 7px;
+}
+
+body.ak-pagetype-event_create #id_event_public_description {
+    min-height: 160px;
+}
+body.ak-pagetype-event_create .ak-styled-fields input[type="text"].ak-error,
+body.ak-pagetype-event_create .ak-styled-fields input[type="password"].ak-error,
+body.ak-pagetype-event_create .ak-styled-fields input[type="number"].ak-error,
+body.ak-pagetype-event_create .ak-styled-fields input[type="email"].ak-error,
+body.ak-pagetype-event_create .ak-styled-fields textarea.ak-error,
+body.ak-pagetype-event_create .ak-styled-fields select.ak-error,
+body.ak-pagetype-event_create input.ak-error,
+body.ak-pagetype-event_create select.ak-error,
+body.ak-pagetype-event_create textarea.ak-error {
+    margin-bottom: 0;
+}
+body.ak-pagetype-event_create .ak-err-below .ak-err {
+    margin-bottom: 6px;
+    margin-top: 3px;
+}
+body.ak-pagetype-event_create .ak-styled-fields input[type="checkbox"] {
+    top: -5px;
+    left: -2px;
+    position: relative;
+    max-width: 30px;
+}
+
+body.ak-pagetype-event_search .area {font-weight: 600;}
+body.ak-pagetype-event_search p {font-weight: 200;}
+body.ak-pagetype-event_search .ak-styled-fields input[type="text"] {
+    width: auto;
+    color: #4b4b4b;
+}
+body.ak-pagetype-event_search .ak-search-area select{
+    top: -1px;
+    position: relative;
+}
+body.ak-pagetype-event_search #ak-map {
+    width: 100%;
+}
+body.ak-pagetype-event_search div.ak-field-box {
+    clear: both;
+    width: 100%;
+    margin: 10px 0;
+}
+@media screen and (min-width:600px){
+    body.ak-pagetype-event_search div.ak-field-box {
+        width: 50%;
+        clear: none;
+    }
+    body.ak-pagetype-event_search #ak-map {
+        width: 48%;
+        padding-top: 43px;
+    }
+}
+
+.ak-search-area select {
+    top: -1px;
+}
+
+.ak-search-area select,
+.ak-search-area input[type="text"] {
+    width: 200px;
+}
+
+.ak-event-distance {
+    color: #a3a3a3;
+}
+
+/* Date/time picker */
+.ak-datetime {
+    display: inline-block;
+}
+
+.ak-datetime input,
+.ak-datetime select {
+    display: inline;
+    position: static;
+    float: none;
+}
+span.ak-datetime input[type="text"] {
+    width: 8em;
+}
+.ak-datetime select {
+    width: auto;
+}
+
+body.ak-pagetype-event_create #id_event_starts_at_ampm {
+    margin-bottom: 0;
+}
+body.ak-pagetype-event_create #id_event_starts_at_row {
+    min-height: 36px;
+}
+body.ak-pagetype-event_create #id_event_starts_at_row {
+    min-height: 48px;
+}
+body.ak-pagetype-event_create #id_event_starts_at_time {
+    width: 66px;
+    color: #4b4b4b;
+}
+
+#id_event_starts_at_ampm {
+    font-weight: 400;
+}
+#id_event_starts_at_ampm + ul.ak-err {
+    float: none;
+}
+body.ak-pagetype-event_create #id_event_starts_at_ampm + ul.ak-err {
+    margin-left: 0;
+}
+
+body.ak-pagetype-event_attendee_tools .ak-field-box label {
+    margin-bottom: 2px;
+}
+
+/* from event_attend.html */
+
+body.ak-pagetype-event_attend ul.events li.event {
+    list-style-type: none;
+}
+body.ak-pagetype-event_attend .event a,
+body.ak-pagetype-event_attend .event a:hover {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 400;
+    pointer-events: none;
+}
+body.ak-pagetype-event_attend div.event-signup,
+body.ak-pagetype-event_attend #event-attend-form {
+    position: relative; /* helps with map positioning */
+}
+body.ak-pagetype-event_attend input[disabled] {
+    background-color: #C8C8C8;
+}
+
+.ak-bar-holder {
+    width: 100%;
+}
+
+/* from event_attendee_tools.html */
+
+body.ak-pagetype-event_attendee_tools .ak-bar h3 {
+    margin-top: -3pt;
+    margin-bottom: 8pt;
+}
+body.ak-pagetype-event_attendee_tools .ak-bar,
+body.ak-pagetype-event_attendee_tools fieldset {
+    border: solid #ccc 1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+body.ak-pagetype-event_attendee_tools .ak-bar ul {
+    margin-bottom: 0;
+}
+body.ak-pagetype-event_attendee_tools #contact {
+    margin-top: 10px;
+    margin-left: -11px;
+}
+body.ak-pagetype-event_attendee_tools .directions-form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+body.ak-pagetype-event_attendee_tools .event-attendee-sidebar {
+    padding: 0;
+    margin-right: 0;
+}
+
+
+/* from event_create.html */
+
+.ak-checkbox-label {
+    float: none;
+}
+body.ak-pagetype-event_create input.checkbox {
+    position: static;
+}
+body.ak-pagetype-event_create div.legend {
+    font-weight: 600;
+    margin-top: 10pt
+}
+body.ak-pagetype-event_create #id_event_is_private_row {
+    clear: both;
+}
+body.ak-pagetype-event_create div.first div.legend {
+    margin-top: 0;
+}
+body.ak-pagetype-event_create .iblock {
+    display: inline-block;
+}
+body.ak-pagetype-event_create .inline {
+    display: inline;
+}
+body.ak-pagetype-event_create .clear {
+    clear: both;
+}
+
+
+
+/* People Power Custom Style 
+================================================================ */
+
+.clear { width:100%;height:0;float:none;clear:both;}
+/* body { font-family: "PeoplePower", sans-serif; } */
+h2 {
+    color: #272F32;
+    margin: 6px 0 2px;
+	font-family:"PeoplePower";
+}
+h3 {
+    color: #537882;
+	font-weight:400;font-size:2em;
+	font-family:"PeoplePower";
+}
+/* Used for paragraphs */
+p {
+/*     font-weight: 400; */
+	color: #272F32;
+}
+
+.ak-submit-button, button, input[type="submit"] {
+	clear:both;
+	float:none;
+	width:100%;
+	border-radius:0;
+	background-color:#EF4134;
+	color:#FFF;
+	font-family:"PeoplePower";
+	text-transform: uppercase;
+	font-weight:500;
+	font-size:2em;
+	box-sizing: border-box;
+	padding:6px 4px 4px 4px;
+	height:auto;
+	line-height: 1.4em;
+}
+.ak-submit-button:hover, button:hover, input[type="submit"]:hover {
+	background-color:#cc372d;
+	transition-duration: 500ms;
+	cursor:pointer;
+}
+
+.ak-styled-fields input[type="text"],
+.ak-styled-fields input[type="email"],
+.ak-styled-fields input[type="password"],
+.ak-styled-fields input[type="number"],
+.ak-styled-fields input[type="tel"],
+.ak-styled-fields input[type="date"],
+.ak-styled-fields input[type="url"],
+.ak-styled-fields input[type="search"],
+.ak-styled-fields textarea,
+.ak-styled-fields select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    /* font-size: 1.0em; */
+    /* font-size: 1.0rem; */
+    background: #F7F7F7;
+    color: #4b4b4b;
+    font-weight: 400;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+.ak-pagetype-signup input, .ak-pagetype-signup .ak-styled-fields input[name="zip"], .ak-pagetype-signup .ak-styled-fields input[name="event_zip"], .ak-pagetype-event_attend input, .ak-pagetype-event_attend .ak-styled-fields input[name="zip"], .ak-pagetype-event_attend .ak-styled-fields input[name="event_zip"] {
+	    width: 100%;
+}
+select { height:45px; }
+.js .ak-labels-overlaid label.ak-is-overlaid {
+    position: absolute;
+    z-index: 1;
+    padding: 0.81em 0.81em;
+    line-height: 1.4;
+	    font-weight: 400;
+}
+
+#signup-story p:first-of-type { margin:0 0 10px 0; }
+
+/*
+.ak-page-footer {margin-top:2em;}
+.ak-page-footer-contents img {max-width:275px;float:left;margin-bottom:1em;width:30%;}
+.ak-page-footer-contents span {font-size:1.2em;width:60%;float:right;}
+.ak-page-footer { margin-bottom: 2em;}	
+*/
+
+#loading { margin:1em auto 2em auto;text-align:center;font-size:2.5em;color:#9dbdc6;opacity:1;}
+
+
+blockquote ul {
+list-style-type:disc;
+font-weight:400;
+	margin:0 0 0 2em;
+}
+blockquote ul li {
+margin:10px 0
+}
+
+@media only screen and (max-width: 750px) {
+	h2 { font-size:2.3em; line-height: 1.0em; }
+}
+
+@media only screen and (min-width: 500px) {
+.ak-pagetype-signup #ak-fieldbox-last_name, .ak-pagetype-signup #ak-fieldbox-mobile_phone, .ak-pagetype-event_attend #ak-fieldbox-last_name, .ak-pagetype-event_attend #ak-fieldbox-mobile_phone  { width:49%; float:right;clear:right; }
+.ak-pagetype-signup #ak-fieldbox-first_name, .ak-pagetype-signup #ak-fieldbox-zip, .ak-pagetype-event_attend #ak-fieldbox-first_name, .ak-pagetype-event_attend #ak-fieldbox-zip {
+width:50%; float:left;clear:left;
+}
+	.ak-pagetype-signup #ak-fieldbox-email, .ak-pagetype-event_attend #ak-fieldbox-email {
+width:100%;display:block; float:none;clear:both;
+}	
+}
+
+/*
+@media only screen and (max-width: 500px) {
+	.ak-page-footer { text-align: center; }	
+	.ak-page-footer-contents img { float:none; width:90%; margin:1em auto; text-align: center; }
+	.ak-page-footer-contents span {font-size:1.2em;width:100%;float:none; clear:both;display:block;text-align: center} 
+}
+*/
+
+/* INDIVIDUAL EVENT PAGES */
+.ak-field-box {
+	border-radius:0;
+	border:0;
+	border-style:none;
+/* 	background-color:rgb(247, 247, 247); */
+}
+p.ak-event-title { line-height:40px;padding-top:10px; }
+p.ak-event-title a { 
+/* color:#537882; */
+font-family:"PeoplePower";
+font-weight:400;
+}
+p.ak-event-title a { font-size:2.3em; }
+.ak-event-table {    margin: 1em 0; }
+table.ak-event-table th { text-align:left; }
+
+.ak-share-button.ak-email {
+background-color:#ef4134;
+}
+.ak-share-button.ak-email:hover {
+	background-color:#cc372d;
+	transition-duration: 500ms;
+	cursor:pointer;
+}
+
+.ak-pagetype-event_attend table.ak-event-table { width:100% !important; }
+
+/* Footer
+================================================================ */
+.ak-page-footer {margin-top:2em; padding-bottom: 40px; }
+.ak-page-footer-contents img { max-width:275px;margin-bottom:1em;width:30%; }
+.ak-page-footer-contents span { font-size:1.2em;width:60%;float:right; }
+.ak-page-footer { margin-bottom: 2em;}	
+.ak-page-footer { text-align: center; }	
+.ak-page-footer-contents img { float:none; width:90%; margin:1em auto; text-align: center; }
+.ak-page-footer-contents span {font-size:1.2em;width:100%;float:none; clear:both;display:block;} 
+.footer-fineprint { text-align: center; }
+
+@media only screen and (min-width: 1020px) {
+	.ak-page-footer { width: 1000px; margin: 0 auto; overflow: hidden; }
+	.footer-pp-logo { display: block; float: left; }
+	.footer-fineprint { text-align: right; float: right; width: 50% }
+ }
+
+
+/* People Power Styles & Graphics
+================================================================ */
+.bgBlack, input[type="submit"].bgBlack { background: #000; }
+.bgBlue { background: #537983; }
+.bgCyan { background: #9ec0c5; }
+.bgRed { background: #ef3030; }
+.textBlack { color: #000; }
+.textBlue { color: #537983; }
+.textCyan { color: #9ec0c5; }
+.textRed { color: #ef3030; }
+.textA { font-family: PeoplePower, sans-serif; font-size: 34px; line-height: 30px; font-weight: 600; }
+.textB { font-family: PeoplePower, sans-serif; font-size: 20px; line-height: 20px; font-weight: 600; margin-bottom: 10px; text-align: center;}
+.icon-mapmarker { background: url(https://peoplepower.org/assets/icon-mapmarker.svg) no-repeat; background-size: contain; text-indent: 25px; }
+/* === */
+.banding-black { background: #000; padding: 20px 0; margin-bottom: 20px;}
+	@media only screen and (min-width: 750px) { .banding-black { margin-bottom: 40px; }}
+.banding-black h1,
+.banding-black h2,
+.banding-black h3,
+.banding-black h4,
+.banding-black h5,
+.banding-black h6 { color: #fff; }
+.buttonA1, input[type="submit"].buttonA1 {    
+	clear: both;
+    float: none;
+    width: auto;
+    border-radius: 0;
+    background-color: #EF4134;
+    color: #FFF;
+    font-family: "PeoplePower";
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 26px;
+    box-sizing: border-box;
+    padding: 10px 28px 5px;
+    height: 43px;
+    line-height: 20px;
+    margin: 0;
+    letter-spacing: .6px;
+}
+.buttonA1:hover, input[type="submit"].buttonA1:hover { background-color: #bb3328;   }
+.buttonA2 { font-size: 16px; width: auto; padding: 6px 10px 4px; margin: 0; display: inline-block; vertical-align: middle; line-height: 38px; vertical-align: top; }
+.buttonA2.bgBlack:hover { background: #666; }
+.buttonA3 {  
+	display: block;
+    width: 100%;
+    background-color: #000;
+    color: #FFF;
+    font-family: "PeoplePower";
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 26px;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    letter-spacing: .6px;
+	text-decoration: none;
+	text-align: left; 
+}
+.buttonA3:hover { color: #fff; transition: all 500ms; }
+.buttonA3 .box { display: block; max-width: 230px; margin: 0 auto; }
+.buttonA3.icon-fb { background: #3b5998; }
+.buttonA3.icon-fb:hover { background: #293d67; }
+.buttonA3.icon-fb .icon { display: inline-block; width: 30px; height: 30px; background: url('https://peoplepower.org/assets/icon-fb.svg') no-repeat; background-size: contain; vertical-align: top; margin: 8px 12px 0 0; }
+.buttonA3.icon-twitter { background: #0084b4; }
+.buttonA3.icon-twitter:hover { background: #005f82; }
+.buttonA3.icon-twitter .icon { display: inline-block; width: 35px; height: 30px; background: url('https://peoplepower.org/assets/icon-twitter.svg')  no-repeat; background-size: contain; vertical-align: top; margin: 8px 10px 0 0; }
+.buttonA3.icon-mapmarker { background: #000; text-indent: 0; }
+.buttonA3.icon-mapmarker:hover { background: #9ec0c5; }
+.buttonA3.icon-mapmarker .icon { display: inline-block; width: 30px; height: 30px; background: url('https://peoplepower.org/assets/icon-mapmarker-white.svg') no-repeat; background-size: contain; vertical-align: top; margin: 8px 10px 0 0; }
+.buttonA3.icon-email { background: #ef3030; }
+.buttonA3.icon-email:hover { background: #bb3328; }
+.buttonA3.icon-email .icon { display: inline-block; width: 38px; height: 30px; background: url('https://peoplepower.org/assets/icon-email-white.svg') no-repeat; background-size: contain; vertical-align: top; margin: 8px 10px 0 0; }
+.buttonA3.icon-home { background: #000; }
+.buttonA3.icon-home:hover { background: #bb3328; }
+.buttonA3.icon-home .icon { display: inline-block; width: 36px; height: 30px; background: url('https://peoplepower.org/assets/icon-home-white.svg') no-repeat; background-size: contain; vertical-align: top; margin: 8px 10px 0 0; }
+.buttonB1 { font-weight: bold; font-size: 12px; line-height: 20px; color: #000; text-transform: uppercase; display: inline-block; }
+.buttonB1:hover { color: #000; text-decoration: none; }
+
+/* signup.html
+================================================================ */
+.ak-pagetype-signup h2 { margin-bottom: 10px}
+
+/* thanks.html
+================================================================ */
+.thanks-share-fb { margin-bottom: 20px; }
+.thanks-share-twitter { margin-bottom: 20px; }
+.thanks-share-getmap { margin-bottom: 20px; }
+.thanks-share-email { margin-bottom: 20px; }
+.ak-emailalt { color: #000; font-size: 12px; font-weight: bold; text-decoration: underline; }
+
+/* event_attend.html
+================================================================ */
+.ak-pagetype-event_attend #ak-map { display: none; }
+.ak-pagetype-event_attend #event-search-results { margin-bottom: 40px; }
+.ak-pagetype-event_attend #event-attend-form { margin-bottom: 40px; }
+
+/* People Power Events
+================================================================ */
+.event-rsvpthanks { margin-bottom: 40px; }
+.ak-event-time { margin-top: 20px; margin-bottom: 20px; }
+.ak-event-directions { margin-bottom: 20px; }
+.ak-event-attendee-count { margin-bottom: 20px; }
+.ak-event-contact-headers { border-bottom: 1px solid #ddd; padding: 5px 0; }
+.ak-event-contact-headers label { width: 60px; display: inline-block; }
+.event-contact-body { padding: 5px 0; }
+.event-contact-body label { padding-bottom: 5px; display: inline-block; 	}
+#event-attendee-details { margin-bottom: 40px; }
+.map-iframe { display: none; margin: 10px 0;  }
+.map-rawlink { margin-top: 10px; margin-bottom: 20px; }
+.map-getdir input[type="text"] { width: 60%; }
+.ak-pagetype-event_attendee_tools .event-tools { margin-bottom: 40px; }
+	@media only screen and (min-width: 750px) { .ak-pagetype-event_attendee_tools .event-tools { margin-bottom: 60px; } }
+.event-attendee-sidebar { margin-bottom: 40px; }
+.event-share-fb { margin-bottom: 20px; }
+
+.taf-form-subject { margin-top: 20px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 2px 0; overflow: hidden; }
+.taf-form-subject label { width: 20%; display: block; float: left; }
+.taf-form-subject span { display: block; float: left; width: 80%; }
+.taf-form-note { padding: 2px 0; border-bottom: 1px solid #ddd; }
+.taf-form-message { padding: 2px 0; border-bottom: 1px solid #ddd; }
+.event-tools .icon-cancel { background: url('https://peoplepower.org/assets/icon-cancel.svg') no-repeat; background-size: contain; text-indent: 25px; margin-right: 10px; }
+.event-tools .icon-email { background: url('https://peoplepower.org/assets/icon-email.svg') no-repeat; background-size: contain; text-indent: 33px; }
+
