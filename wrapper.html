@@ -73,7 +73,9 @@
     <div class="ak-page-container">
 
         {% block content %}{% endblock %}
-
+{% if page.custom_fields.code_body %}
+    {% include_tmpl page.custom_fields.code_body %}
+{% endif %}
         <div class="ak-page-footer">
             <div class="ak-page-footer-contents">
 <a href="https://www.aclu.org/" class="footer-pp-logo"><img src="https://s3.amazonaws.com/s3.peoplepower.org/images/peoplepowerblacklogo-new.svg" alt="People Power | ACLU" /></a>
