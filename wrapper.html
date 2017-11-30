@@ -27,10 +27,10 @@
 
 		
     {% block meta_additions %}{% endblock %}
-
-    {% load_css %}
-        //s3.amazonaws.com/peoplepower.org/assets/peoplepowerstyle.css?={% now "U" %}
-    {% end %}
+	<style type="text/css"> 
+      {% include "style-justice-democrats-actionkit.css" %}
+    </style>
+    
     {% block css_additions %}{% endblock %}
 
     {% load_ak_context context %}
