@@ -983,7 +983,7 @@ ul.ak-errors li {
 #ak-errors,
 .ak-errors {
     background-color: #ffe6e6;
-    color: #ef4134;
+    color: #5b919f;
     font-weight: 200;
 }
 #ak-confirmation,
@@ -2797,7 +2797,7 @@ p {
 	float:none;
 	width:100%;
 	border-radius:0;
-	background-color:#EF4134;
+	background-color:#5b919f;
 	color:#FFF;
 	font-family:"proxima-nova";
 	text-transform: uppercase;
@@ -2809,7 +2809,7 @@ p {
 	line-height: 1.4em;
 }
 .ak-submit-button:hover, button:hover, input[type="submit"]:hover {
-	background-color:#cc372d;
+	background-color:#416973;
 	transition-duration: 500ms;
 	cursor:pointer;
 }
@@ -2907,10 +2907,10 @@ p.ak-event-title a { font-size:2.3em; }
 table.ak-event-table th { text-align:left; }
 
 .ak-share-button.ak-email {
-background-color:#ef4134;
+background-color:#5b919f;
 }
 .ak-share-button.ak-email:hover {
-	background-color:#cc372d;
+	background-color:#416973;
 	transition-duration: 500ms;
 	cursor:pointer;
 }
@@ -2961,7 +2961,7 @@ background-color:#ef4134;
     float: none;
     width: auto;
     border-radius: 0;
-    background-color: #EF4134;
+    background-color: #5b919f;
     color: #FFF;
     font-family: "proxima-nova";
     text-transform: uppercase;
