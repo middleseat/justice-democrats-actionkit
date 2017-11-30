@@ -508,7 +508,7 @@ a.ak-highlight-on-hover:hover { text-decoration: underline; color: #31a8f0; }
 /* Used for site title */
 h1 { font-size: 2em; margin: 0.67em 0; font-weight: 600; }
 /* Used for page title */
-h2 { font-size: 48px; line-height: 50px; font-weight: 700; color: #272F32; }
+h2 { font-size: 30px; line-height: 40px; font-weight: 700; color: #272F32; }
 	@media screen and (min-width: 600px) { h2 { margin: 24px 0 10px; } }
 /* Used for page section headings */
 h3 { font-size: 22px; line-height: 30px; font-weight: 200; margin: 18px 0 4px; /* new margins for event create. double check it's ok elsewhere. if not, add body.ak-pagetype-event_create to the 2nd margin line & uncomment the 1st.... */ }
