@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<form class="ak-form" name="act" method="POST" action="{% if update %}/update_action/{% else %}/act/{% endif %}" accept-charset="utf-8">
+<form class="ak-form norecognize" name="act" method="POST" action="{% if update %}/update_action/{% else %}/act/{% endif %}" accept-charset="utf-8">
     <input type="hidden" name="page" value="{{ page.name }}">
 
 <div class="ak-grid-row">
