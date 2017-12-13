@@ -2,7 +2,6 @@
 {% load actionkit_tags %}
 
 {% block content %}
-<img alt="" width="0" height="0" src="https://ms.clicks.actions.aclu.org/conversion?version=1&conversion_items=1&conversion_value=0" />
 
 <form class="ak-form norecognize" name="act" method="POST" action="{% if update %}/update_action/{% else %}/act/{% endif %}" accept-charset="utf-8">
     <input type="hidden" name="page" value="{{ page.name }}">
@@ -38,53 +37,28 @@
             <ul class="compact" id="ak-errors"></ul>
 
             <div id="ak-user-info">
+                <h3>Your contact information</h3>
+
                 {% include "./user_form_wrapper.html" %}
 
-                
+                <input type="hidden" name="never_recognize" value="1">
             </div>
 
             <div id="ak-event-info">
                 <h3>Event information</h3>
                 <div>
-
-                    {% if request.GET.eventcategory == 'daca' %}
-                    {% with page.custom_fields.extra_json_data|load_json as targets %}
-                    {% if user and user.location and user.location.us_district and targets %}
-                    {% with user_state=user.state user_us_district=user.location.us_district %}
-                    {% with user_senates=targets.senate|nth:user_state user_houses=targets.house|nth:user_us_district %}
-                    {% if user_senates or user_houses %}
-                    <div>
-                      <label for="id_event_target">Which Member of Congress are you planning a meeting for? <span class="ak-required-flag">*</span></label>
-
-                      <select id="id_event_target" type="text" name="action_event_target">
-                        {% for target in user_senates %}
-                        <option>{{ target.title }} {{ target.nickname|default:target.first }} {{ target.last }}</option>
-                        {% endfor %}
-                        {% for target in user_houses %}
-                        <option>{{ target.title }} {{ target.nickname|default:target.first }} {{ target.last }}</option>
-                        {% endfor %}
-                      </select>
-                    </div>
-                    {% endif %}                    
-                    {% endwith %}
-                    {% endwith %}                    
-                    {% endif %}
-                    {% endwith %}
-                    {% endif %}
-
                     {% if campaign.use_title %}
                         <div>
                             <label for="id_event_title">Event name<span class="ak-required-flag">*</span></label>
-                            <input id="id_event_title" type="text" name="event_title"{% if campaign.id == 9 %} value="‘Let People Vote’ Event"{% endif %}>
+                            <input id="id_event_title" type="text" name="event_title" value="{{ campaign.default_title }}">
                         </div>
                     {% endif %}
 
                     {% with event_starts_at as date_field %}
                         <div id="id_event_starts_at_row">
-                            <label for="id_event_starts_at">Start date/time</label>
+                            <label for="id_event_starts_at">Start date/time<span class="ak-required-flag">*</span></label>
                             {% include "./date_picker.html" %}
                         </div>
-
 
                         <script type="text/javascript">
                             // Replace animation w/instant show, because anim
@@ -125,7 +99,7 @@
                     {% endif %}
 
                     <div>
-                        <label for="id_event_max_attendees">Maximum attendance</label>
+                        <label for="id_event_max_attendees">Max. signups</label>
                         <input id="id_event_max_attendees" type="text" name="event_max_attendees" value="{{ campaign.default_event_size|default:"" }}" size=3>
                     </div>
 
@@ -133,28 +107,6 @@
                 </div>
             </div>
 
-            {% if templateset.custom_fields.event_categories and campaign.id == 2 %}
-            <div id="event-categories">
-              <h3>Event categories</h3>
-              {% with templateset.custom_fields.event_categories|load_json as categories_config %}
-              {% for category in categories_config %}{% if not categories_config|nth:category|nth:"hidden"|default:0 %}
-              <div class="ak-err-below">
-                <input id="id_action_event_category_{{ category }}"
-                       class="checkbox" type="checkbox"
-                       name="action_event_category"
-                       value="{{ category }}"
-                       {% if event and event.custom_fields.category and event.custom_fields.category|force_list|contains:category %}checked{% endif %}
-                >
-                <label for="id_action_event_category_{{ category }}"
-                       class="ak-checkbox-label ak-event-category-checkbox-label">
-                  {{ categories_config|nth:category|nth:"label" }}
-                </label>
-              </div>
-              {% endif %}{% endfor %}
-              {% endwith %}
-            </div>
-            {% endif %}
-            
             <div id="event-info">
                 <h3>Event location</h3>
                 <div class="unknown_user">
@@ -173,7 +125,7 @@
                             <label for="id_event_venue">Venue<span class="ak-required-flag">*</span></label>
                             <input id="id_event_venue" type="text" if-at-my-house="Home" name="event_venue">
                         </div>
-                        <div style="display:none;">
+                        <div>
                             <label for="event_country">Country</label>
                             {% include "./country_select.html" %}
                         </div>
@@ -182,26 +134,31 @@
                             <input id="id_event_address1" type="text" name="event_address1">
                         </div>
                         <div>
-                            <label for="id_event_city">City<span class="ak-required-flag">*</span></label>
-                            <input id="id_event_city" type="text" name="event_city" required>
+                            <label for="id_event_city">City</label>
+                            <input id="id_event_city" type="text" name="event_city">
                         </div>
                         <div>
-                            <label for="id_event_state">State<span class="ak-required-flag">*</span></label>
+                            <label for="id_event_state">State</label>
                             {% include "./state_select.html" %}
                         </div>
                         <div>
-                            <label for="id_event_postal">Postal<span class="ak-required-flag">*</span></label>
+                            <label for="id_event_postal">Postal</label>
                             <input id="id_event_postal" type="text" name="event_postal">
                         </div>
                         <div>
-                            <label for="id_event_zip">ZIP<span class="ak-required-flag">*</span></label>
-                            <input id="id_event_zip" type="text" name="event_zip" required>
+                            <label for="id_event_zip">ZIP</label>
+                            <input id="id_event_zip" type="text" name="event_zip">
                         </div>
                         <!-- <div><label for="id_event_phone">Contact phone:</label> <input id="id_event_phone" type="tel" name="event_phone" size="12"></div> -->
                         {% if campaign.show_address1 %}
-                            <p style="font-weight:200;width: 65%;margin-left: 35%;">NOTE: Event addresses are public.</p>
+                            <div class="strong">
+                                NOTE: Event addresses are public.
+                            </div>
                         {% endif %}
                     {% endwith %}
+                    <p>
+                        Double-check date, time, and location before you submit!
+                    </p>
                 </div>
 
             </div>
@@ -210,16 +167,17 @@
                 <h3>Event description</h3>
                 <div class="ak-errs-below">
                     <label for="id_event_public_description">
-                        Provide a description of your event:<br>
-                        What issue is your event about? What actions will you be taking at the event? Add any other compelling context to motivate people to sign up.
+                        Public description<span class="ak-required-flag">*</span>
+                        <br><span class="ak-normal">
+                            {% if campaign.allow_private %}
+                                For public events, people
+                            {% else %}
+                                People
+                            {% endif %}
+                            will see this text before signing up
+                        </span>
                     </label>
-                    <textarea id="id_event_public_description" name="event_public_description">{% if request.GET.eventcategory == 'daca' %}Join us for a meeting with staff of [Rep/Senator NAME] to urge them to support a clean Dream Act by the end of the year. 800,000 young immigrants who know no other home than the United States are at risk of being deported unless Congress passes the Dream Act, and our Member of Congress will play a key role in this vote.
- 
-In our visit we will follow an agenda and talking points from ACLU People Power and share our personal stories about why immigration is important to us.
- 
-[Enter additional event details here – if you’re huddling before the meeting, if your event time is TBD and will be changed as soon as the meeting is scheduled, or anything else you want to share about your visit.]
- 
-Together our community can help young immigrants by demanding a #DreamActNow!{% endif %}</textarea>
+                    <textarea id="id_event_public_description" name="event_public_description"></textarea>
                 </div>
 
                 <div>
@@ -228,38 +186,13 @@ Together our community can help young immigrants by demanding a #DreamActNow!{% 
                     <textarea id="id_event_directions" name="event_directions"></textarea>
                 </div>
 
-                <div style="display:none;">
+                <div>
                     <label for="id_event_note_to_attenddees">Note to attendees
                     </label>
                     <textarea id="id_event_note_to_attenddees" name="event_note_to_attendees"></textarea>
                 </div>
-            </div>
 
-            {% if request.user.is_authenticated %}
-              <div>
-                <h3>STAFF ONLY</h3>
-                <div class="ak-err-below">
-                  <label>Redirect this event to another event</label>
-                  <input type="text" name="action_replacement_event_id" {% if event.custom_fields.replacement_event_id %}value="{{ event.custom_fields.replacement_event_id }}"{% endif %} placeholder="Enter the replacement event ID"/>
-                </div>
-                <div class="ak-err-below">
-                  <label>&nbsp;</label>
-                  <input type="text" name="action_replacement_campaign_name" {% if event.custom_fields.replacement_campaign_name %}value="{{ event.custom_fields.replacement_campaign_name }}"{% endif %} placeholder="Enter the campaign name for the replacement event (action, voting_rights)"/>
-                </div>
-                <div class="ak-err-below">
-                  <input id="id_action_event_category_plannedparenthood"
-                         class="checkbox" type="checkbox"
-                         name="action_event_category"
-                         value="plannedparenthood"
-                         {% if event and event.custom_fields.category and event.custom_fields.category|force_list|contains:"plannedparenthood" %}checked{% endif %}
-                  >
-                  <label for="id_action_event_category_plannedparenthood"
-                         class="ak-checkbox-label ak-event-category-checkbox-label">
-                    Add the Planned Parenthood category
-                  </label>
-                </div>
-              </div>    
-            {% endif %}
+            </div>
 
         </div><!--9-of-12-->
 
@@ -322,7 +255,7 @@ Together our community can help young immigrants by demanding a #DreamActNow!{% 
 
         {% if not update %}
         <p>
-			<strong>Next, we&rsquo;ll review your event for approval.</strong>
+            Next, we'll email you a link to confirm your event.
         </p>
         {% endif %}
 
@@ -340,54 +273,6 @@ Together our community can help young immigrants by demanding a #DreamActNow!{% 
 {% include "includes/jquery_ui.html" %}
 
 <script type="text/javascript">
- actionkit.forms.prefill = function(overwrite) {
-     var forms = actionkit.forms, ak = actionkit;
-     // some event handlers want to change behavior during prefill (like
-     // maybe not fire). they can check actionkit.forms.prefilling.
-     forms.prefilling = true;
-     
-     var prefill_data = (
-         ( ak.context && ak.context.prefill_data )
-         ? ak.context.prefill_data
-         : ak.utils.getListArgs()
-     );
-     if ( prefill_data.form_name )
-         forms.setForm(prefill_data.form_name);
-     $(ak.form).deserialize(prefill_data, {overwrite: false});
-
-     // Check/uncheck boxes, which deserialize() won't do
-     $(ak.form).find('input:checkbox').each(function() {
-         if (prefill_data[this.name] && prefill_data[this.name].constructor === Array) {
-             this.checked = $.inArray(this.value, prefill_data[this.name]) !== -1;
-         } else {
-             this.checked = prefill_data[this.name] == this.value ? true : false;
-         }
-     })
-
-     // checking for true, not just present
-     if ( prefill_data['amount_other'] ) {
-         $(ak.form).find('input.amount_radio_button').attr('checked', false)
-         $(ak.form).find('input[name=amount_other]').click()
-     }
-
-     // fire onchange and onclick, for in-field labels etc.
-     // unfortunately #id_subscription_consent's onchange turns on
-     // suppress_subscribe, so leave it out.
-     $(ak.form).find(':input:not(#id_subscription_consent)').change();
-     $(ak.form).find(':input:checked').each(function(){
-         // trigger radio handler used by donate form amount buttons
-         // for checkboxes we just checked, click() would uncheck them
-         if (this.type.toLowerCase() != 'checkbox')
-             $(this).click();
-         $(this).change();
-     });
-
-     // the change events forced above hide errors; show them again
-     forms.handleQueryStringErrors()
-
-     forms.prefilling = false;
- }
- 
     isEventUnitedStates = function () {
         var country = actionkit.form && actionkit.form.event_country
         && actionkit.utils.val(actionkit.form.event_country)
@@ -442,7 +327,6 @@ Together our community can help young immigrants by demanding a #DreamActNow!{% 
     };
 
     $(document).ready( function() {
-
         var prev_is_us, now_is_us;
         $(actionkit.form.event_country).focus(function() {
             prev_is_us = isEventUnitedStates();
@@ -514,65 +398,7 @@ $( function () {
             break;
         }
     }
- } );
-
-
- var renderDacaTargets = function() {
-     var target = $("#id_event_target").val();
-     if (!$('#id_event_title').data("original-value")) {
-         $('#id_event_title').data("original-value", $('#id_event_title').val());
-     }
-     if (!$('#id_event_public_description').data("original-value")) {
-         $('#id_event_public_description').data("original-value", $('#id_event_public_description').val());
-     }
-
-     $('#id_event_title').val(
-         $("#id_event_title").data("original-value").replace(/\[Rep\/Senator NAME\]/g, target)
-     );
-     $('#id_event_public_description').val(
-         $("#id_event_public_description").data("original-value")
-                                          .replace(/\[Rep\/Senator NAME\]/g, target)
-                                          .replace(/\[Rep\/Senator NAME\]/g, target)
-     );
- };
- 
-$(window).load( function() {
-$('label[for="id_mobile_phone"]').html('Mobile phone*');
-	
-	function getParameterByName(name) {
-		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-			results = regex.exec(location.search);
-		return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-	}
-
-
-	var categorychoice = getParameterByName("eventcategory");
-	if (categorychoice == 'plannedparenthood') {
-		$('#id_action_event_category_plannedparenthood').prop('checked', true);
-		$('#event-categories').hide();
-		$('#id_event_title').val('Planned Parenthood Action Event');
-	} else {
-		$('#id_action_event_category_plannedparenthood').closest('div').hide();
-	}
-	if (categorychoice == 'daca') {
-		$('#id_action_event_category_daca').prop('checked', true);
-		$('#event-categories').hide();
-		$('#id_event_title').val('Meeting with [Rep/Senator NAME] at district office to demand a clean Dream Act');
-	}
-	if (categorychoice == 'smallbusiness') {
-		$('#id_action_event_category_smallbusiness').prop('checked', true);
-		$('#event-categories').hide();
-		$('#id_event_title').val('#OpenToAll Business Canvass');
-		$('#id_event_public_description').val('Five years ago, Dave Mullins and Charlie Craig walked into Masterpiece Cakeshop, a Colorado bakery, to purchase a cake for their wedding reception. But the bakery’s owner refused to serve them solely because they’re a same-sex couple. On December 5, the ACLU will be at the Supreme Court, arguing on behalf of Dave and Charlie that businesses that open their doors to the public do not have a constitutional right to discriminate. It’s our chance to show that communities across the country stand for equality and fairness and against discrimination – we’ll meet up to distribute posters and then go out to local businesses and ask them to display a sign showing that they are #OpenToAll to support Dave and Charlie!');
-	}
-
-        if (categorychoice == 'daca' && $("#id_event_target").length) {
-            renderDacaTargets();
-            $("#id_event_target").change(renderDacaTargets);
-        }
-});
-	
+} );
 </script>
 
 {% endblock %}
