@@ -98,7 +98,7 @@
                     {% endif %}
 
                     <div>
-                        <label for="id_event_max_attendees">Max. signups</label>
+                        <label for="id_event_max_attendees">Max. signups<span class="ak-required-flag">*</span></label>
                         <input id="id_event_max_attendees" type="text" name="event_max_attendees" value="{{ campaign.default_event_size|default:"" }}" size=3>
                     </div>
 
@@ -133,11 +133,11 @@
                             <input id="id_event_address1" type="text" name="event_address1">
                         </div>
                         <div>
-                            <label for="id_event_city">City</label>
+                            <label for="id_event_city">City<span class="ak-required-flag">*</span></label>
                             <input id="id_event_city" type="text" name="event_city">
                         </div>
                         <div>
-                            <label for="id_event_state">State</label>
+                            <label for="id_event_state">State<span class="ak-required-flag">*</span></label>
                             {% include "./state_select.html" %}
                         </div>
                         <div>
@@ -145,7 +145,7 @@
                             <input id="id_event_postal" type="text" name="event_postal">
                         </div>
                         <div>
-                            <label for="id_event_zip">ZIP</label>
+                            <label for="id_event_zip">Zip code<span class="ak-required-flag">*</span></label>
                             <input id="id_event_zip" type="text" name="event_zip">
                         </div>
                         <!-- <div><label for="id_event_phone">Contact phone:</label> <input id="id_event_phone" type="tel" name="event_phone" size="12"></div> -->
