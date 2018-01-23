@@ -4,9 +4,8 @@
 {% block content %}
 <div class="ak-grid-row">
     <div class="ak-grid-col ak-grid-col-12-of-12">
-        <h2>Thanks!</h2>
-        <p>We'll be in touch soon.</p>
-        <img src="https://actionkit-webhooks.herokuapp.com/{{user.id}}"/>
+        <h2>Confirm Your Event</h2>
+        <p>Check your email {% if args.email %}at {{args.email}}{% endif %} to finish creating your event.</p>
     </div>
 </div>
 {% endblock %}
