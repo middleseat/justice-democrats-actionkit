@@ -16,7 +16,7 @@
         <span class="ak-event-venue">{{ event.venue }}</span>
     {% endif %}
 
-    {% if event.custom_fields.location_public %}
+    {% if event.custom_fields.location_public == true %}
     	<div class="ak-event-address1">{{ event.address1 }}</div>	
     {% endif %}
     <div class="ak-event-city-etc">{{ event.city_etc }}</div>
