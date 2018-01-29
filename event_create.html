@@ -420,6 +420,26 @@ $( function () {
         }
     }
 } );
+	
+$(window).load( function() {
+	
+	function getParameterByName(name) {
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+		return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+
+	var candidatehost = getParameterByName("candidatehost");
+	if (candidatehost == 'yes') {
+		$('#id_action_candidatehost_y').prop('checked', true);
+		$('#ak-fieldbox-action_candidatehost').hide();
+	} else {
+		$('#ak-fieldbox-action_candidatehost').hide();
+	}
+});
+	
+	
 </script>
 
 {% endblock %}
