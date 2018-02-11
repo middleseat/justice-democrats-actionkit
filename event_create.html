@@ -430,7 +430,7 @@ $(window).load( function() {
     }
 
     var direct_publish = getParameterByName("directpublish");
-    if (directpublish != null) {
+    if (direct_publish != null) {
 	var current_tags = JSON.parse($('#id_event_tags').val());
         current_tags[0] = 'Source: Direct Publish';
         $('#id_event_tags').val(JSON.stringify(current_tags));
