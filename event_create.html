@@ -446,9 +446,16 @@ $(window).load( function() {
 	var current_tags = JSON.parse($('#id_event_tags').val());
         current_tags[0] = 'Source: Direct Publish';
         $('#id_event_tags').val(JSON.stringify(current_tags));
-	debugger;
         $('#id_email').on('change', setRedirectUrl);
         setRedirectUrl();
+	
+	$("#id_action_event_turnout_requested_no").on('change', function(){
+            if( $(this).is(':checked') ) {
+	        window.redirect_el = $('input[name="redirect"]').remove();
+	    } else {
+		$('input[type="submit"]').insertBefore(window.redirect_el);
+	    }
+        });
     } else {
         $('#ak-fieldbox-action_event_turnout_requested').hide();
     }
