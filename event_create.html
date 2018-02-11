@@ -449,13 +449,16 @@ $(window).load( function() {
         $('#id_email').on('change', setRedirectUrl);
         setRedirectUrl();
 	
-	$("#id_action_event_turnout_requested_no").on('change', function(){
-            if( $(this).is(':checked') ) {
+	function toggleRedirect() {
+            if( $('#id_action_event_turnout_requested_no).is(':checked') ) {
 	        window.redirect_el = $('input[name="redirect"]').detach();
 	    } else {
 		window.redirect_el.appendTo($('input[type="submit"]').parent())
 	    }
-        });
+	}
+	
+	$("#id_action_event_turnout_requested_no").on('change', toggleRedirect);
+        $("#id_action_event_turnout_requested_yes").on('change', toggleRedirect);
     } else {
         $('#ak-fieldbox-action_event_turnout_requested').hide();
     }
