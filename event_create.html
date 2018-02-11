@@ -132,8 +132,8 @@
                 </div>
             </div>
             
-            <input type="hidden" id="id_event_tags" style="display:none;" name="action_event_tags" value='["Source: ActionKit Form", "Event: Should Contact Host"]' />
-
+            <input type="hidden" id="id_event_tags" style="display:none;" name="action_event_tags" value='["Source: Volunteer Form", "Event: Should Contact Host"]' />
+		
             <div id="event-info">
                 <h3>Event location</h3>
                 <div class="unknown_user">
@@ -422,23 +422,20 @@ $( function () {
 } );
 	
 $(window).load( function() {
-	
-	function getParameterByName(name) {
-		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-			results = regex.exec(location.search);
-		return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-	}
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
 
-	var candidatehost = getParameterByName("candidatehost");
-	if (candidatehost == 'yes') {
-		$('#id_action_candidatehost_y').prop('checked', true);
-		$('#ak-fieldbox-action_candidatehost').hide();
-	} else {
-		$('#ak-fieldbox-action_candidatehost').hide();
-	}
+    var direct_publish = getParameterByName("directpublish");
+    if (directpublish != null) {
+	var current_tags = JSON.parse($('#id_event_tags').val());
+        current_tags[0] = 'Source: Direct Publish';
+        $('#id_event_tags').val(JSON.stringify(current_tags));
+    }
 });
-	
 	
 </script>
 
