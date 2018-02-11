@@ -439,15 +439,13 @@ $(window).load( function() {
         $('[name="redirect"]').val(url);
     }
 
-    $('#id_email').on('change', setRedirectUrl);
-    setRedirectUrl()
-
     if (direct_publish) {
 	var current_tags = JSON.parse($('#id_event_tags').val());
         current_tags[0] = 'Source: Direct Publish';
         $('#id_event_tags').val(JSON.stringify(current_tags));
-	 debugger;
-	$('[name="redirect"]').val("https://go.justicedemocrats.com/survey/event-turnout-request/);
+	debugger;
+        $('#id_email').on('change', setRedirectUrl);
+        setRedirectUrl();
     } else {
         $('#ak-fieldbox-action_turnout_requested').hide();
     }
