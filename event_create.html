@@ -453,7 +453,7 @@ $(window).load( function() {
             if( $(this).is(':checked') ) {
 	        window.redirect_el = $('input[name="redirect"]').detach();
 	    } else {
-		$('input[type="submit"]').insertBefore(window.redirect_el);
+		window.redirect_el.appendTo($('input[type="submit"]').parent())
 	    }
         });
     } else {
