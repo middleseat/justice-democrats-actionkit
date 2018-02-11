@@ -431,10 +431,13 @@ $(window).load( function() {
 
     var direct_publish = getParameterByName("directpublish");
     console.log(direct_publish);
+
     if (direct_publish) {
 	var current_tags = JSON.parse($('#id_event_tags').val());
         current_tags[0] = 'Source: Direct Publish';
         $('#id_event_tags').val(JSON.stringify(current_tags));
+    } else {
+        $('#ak-fieldbox-action_turnout_requested').hide();
     }
 });
 	
