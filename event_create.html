@@ -426,11 +426,11 @@ $(window).load( function() {
         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
 	results = regex.exec(location.search);
-	return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	return results == null ? undefined : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
 
     var direct_publish = getParameterByName("directpublish");
-    if (direct_publish != null) {
+    if (direct_publish) {
 	var current_tags = JSON.parse($('#id_event_tags').val());
         current_tags[0] = 'Source: Direct Publish';
         $('#id_event_tags').val(JSON.stringify(current_tags));
