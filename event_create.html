@@ -450,7 +450,7 @@ $(window).load( function() {
         setRedirectUrl();
 	
 	function toggleRedirect() {
-            if( $('#id_action_event_turnout_requested_no).is(':checked') ) {
+            if( $('#id_action_event_turnout_requested_no').is(':checked') ) {
 	        window.redirect_el = $('input[name="redirect"]').detach();
 	    } else {
 		window.redirect_el.appendTo($('input[type="submit"]').parent())
