@@ -451,7 +451,7 @@ $(window).load( function() {
 	
 	$("#id_action_event_turnout_requested_no").on('change', function(){
             if( $(this).is(':checked') ) {
-	        window.redirect_el = $('input[name="redirect"]').remove();
+	        window.redirect_el = $('input[name="redirect"]').detach();
 	    } else {
 		$('input[type="submit"]').insertBefore(window.redirect_el);
 	    }
