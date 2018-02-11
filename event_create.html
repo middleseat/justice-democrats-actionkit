@@ -434,6 +434,7 @@ $(window).load( function() {
     console.log(direct_publish);
 	
     window.event_random_id = Math.random().toString().split('.')[1];
+    $('#ak-fieldbox-action_event_random_id').val(window.event_random_id);
 
     function setRedirectUrl() {
         var email = $('#id_email').val();
