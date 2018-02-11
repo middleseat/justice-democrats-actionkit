@@ -432,10 +432,12 @@ $(window).load( function() {
 
     var direct_publish = getParameterByName("directpublish");
     console.log(direct_publish);
+	
+    window.event_random_id = Math.random().toString().split('.')[1];
 
     function setRedirectUrl() {
         var email = $('#id_email').val();
-	var url = "https://go.justicedemocrats.com/survey/event-turnout-request/?email=" + email + "?event_id=";
+	var url = "https://go.justicedemocrats.com/survey/event-turnout-request/?email=" + email + "?event_id=" + window.event_random_id;
         $('[name="redirect"]').val(url);
     }
 
@@ -447,10 +449,10 @@ $(window).load( function() {
         $('#id_email').on('change', setRedirectUrl);
         setRedirectUrl();
     } else {
-        $('#ak-fieldbox-action_turnout_requested').hide();
+        $('#ak-fieldbox-action_event_turnout_requested').hide();
     }
 
-	
+    $('#ak-fieldbox-action_event_random_id').hide();
 });
 	
 </script>
