@@ -280,6 +280,7 @@
         </p>
         {% endif %}
 
+        <input type="hidden" name="redirect" value="{{page.followup.url}}?refcode={{args.source}}">
         <input id="id_submit" type="submit" value="{% if update %}Update event{% else %}Continue to next step: Confirm event{% endif %}" class="ak-submit-button">
 
     </div>
@@ -432,13 +433,26 @@ $(window).load( function() {
     var direct_publish = getParameterByName("directpublish");
     console.log(direct_publish);
 
+    function setRedirectUrl() {
+        var email = $('#id_email').val();
+	var url = "https://go.justicedemocrats.com/survey/event-turnout-request/?email=" + email + "?event_id=";
+        $('[name="redirect"]').val(url);
+    }
+
+    $('#id_email').on('change', setRedirectUrl);
+    setRedirectUrl()
+
     if (direct_publish) {
 	var current_tags = JSON.parse($('#id_event_tags').val());
         current_tags[0] = 'Source: Direct Publish';
         $('#id_event_tags').val(JSON.stringify(current_tags));
+	 debugger;
+	$('[name="redirect"]').val("https://go.justicedemocrats.com/survey/event-turnout-request/);
     } else {
         $('#ak-fieldbox-action_turnout_requested').hide();
     }
+
+	
 });
 	
 </script>
