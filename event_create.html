@@ -464,6 +464,18 @@ $(window).load( function() {
     }
 
     $('#ak-fieldbox-action_event_random_id').hide();
+
+    var event_type = getParameterByName('event_type');
+    if (event_type) {
+	var value = {
+	    phonebank: 'Phonebank',
+	    canvass: 'Canvass
+	}[event_type]
+	
+	if (value) {
+	    $('#id_action_event_type').val(value);
+	}
+    }
 });
 	
 </script>
