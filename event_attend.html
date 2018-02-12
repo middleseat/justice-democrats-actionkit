@@ -102,11 +102,7 @@
                     <button type="submit" class="ak-submit-button">{% if update %}Update RSVP{% else %}RSVP to attend{% endif %}</button>
                     </div>
                 </div>   
-                <div class="event-share">
-		<div class="subA">Share</div>
-	   <div class="thanks-share-fb"><a class="buttonA3 icon-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://go.peoplepower.org/event/{{ campaign.local_name }}/{{event.id}}/signup/?source=fbshare" target="_blank"><span class="box"><span class="icon"></span>Post to Facebook</a></span></div>
-<div class="thanks-share-twitter"><a class="buttonA3 icon-twitter" href="https://twitter.com/home?status=Join%20me%20for%20an%20%40ACLU%20People%20Power%20Action%20Event%20in%20{{ event.city_etc_no_postal }}%20https%3A//go.peoplepower.org/event/{{campaign.local_name}}/{{event.id}}/signup/?source=twshare" target="_blank"><span class="box"><span class="icon"></span>Share on Twitter</a></span></div>
-	</div>        
+                      
             </div>
         </div>
 <div class="ak-grid-row">
@@ -128,7 +124,7 @@
                 {% elif event.is_awaiting_confirmation %}
                     <h2>Sorry, the event host has not yet confirmed this event.</h2>
                 {% elif event.is_full %}
-                    <h2>Sorry, this event is full. <a href="https://map.peoplepower.org">Search for another event to attend</a>, or <a href="https://go.peoplepower.org/signup/host_new">host your own</a>.</h2><h4>If you have already signed up to attend this event, here are the basic details:</h4>
+                    <h2>Sorry, this event is full. <a href="https://now.justicedemocrats.com/events">Search for another event to attend</a>, or <a href="https://go.justicedemocrats.com/signup/host-event/">host your own</a>.</h2><h4>If you have already signed up to attend this event, here are the basic details:</h4>
                     <div id="event-search-results">
                     {% with 1 as hide_map %}
                     {% include "./event_search_results.html" %}
@@ -139,7 +135,7 @@
                     <h2>We&rsquo;ll confirm this event soon! Come back later.</h2>
                 {% endif %}
                 <div>
-                    <a href="https://map.peoplepower.org/#zipcode={{args.zip}}&distance=50&sort=distance&f%5B%5D=launch">Search for another event</a>
+                    <a href="https://now.justicedemocrats.com/events">Search for another event</a>
                 </div>
         
             </div>
