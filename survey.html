@@ -58,20 +58,7 @@
 <script>
 
 $(window).load( function() {
-    function getParameterByName(name) {
-        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-	results = regex.exec(location.search);
-	return results == null ? undefined : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
-	
-    var event_id = getParameterByName("event_id");
-    var event_id_input = $("#id_action_event_id")
-
-    if (event_id) {
-	event_id_input.val(event_id);
-	event_id_input.closest('.ak-err-below').hide();
-    }
+    $("#id_action_event_id").hide();
 });
 	
 </script>
