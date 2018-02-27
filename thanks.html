@@ -182,8 +182,8 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
-    var call_power_campaign = $("#call_power_campaign_id").text();
-    var phone = $("#phone").text();
+    var call_power_campaign = $("#call_power_campaign_id").text().trim();
+    var phone = $("#phone").text().trim();
 
     if (call_power_campaign != '' && call_power_campaign != 0 && call_power_campaign != '0') {
 	$.get('https://jd-callpower.herokuapp.com/call/create', {
