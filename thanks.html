@@ -186,7 +186,7 @@ $(document).ready(function() {
     var phone = $("#phone").text();
 
     if (call_power_campaign != '' && call_power_campaign != 0 && call_power_campaign != '0') {
-	$.post('https://jd-callpower.herokuapp.com/call/create', {
+	$.get('https://jd-callpower.herokuapp.com/call/create', {
 	    userPhone: phone,
 	    campaignId: call_power_campaign
 	});
