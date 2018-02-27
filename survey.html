@@ -61,8 +61,10 @@ $(window).load( function() {
     $("#id_action_event_id").closest('.ak-err-above').hide();
 });
 
+console.log($(form));
 $(form).on('submit', function() {
-    var call_power_campaign = $("#call-power-campaign").val();
+    var call_power_campaign = $("#id_action_call_power_campaign_id").val();
+    console.log(call_power_campaign);
     if (call_power_campaign != 0 || call_power_campaign != '0') {
 	$.ajax('https://jd-callpower.herokuapp.com/call/create', {
 	    userPhone: $('#id_phone').val(),
