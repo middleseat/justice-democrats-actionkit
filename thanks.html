@@ -179,4 +179,20 @@
     actionkit.sharing.initShareTools();
 </script>
 
+<script type="text/javascript">
+
+$(form).on('submit', function() {
+    var call_power_campaign = $("#call_power_campaign_id").text();
+    var phone = $("#phone").text();
+
+    if (call_power_campaign != '' && call_power_campaign != 0 && call_power_campaign != '0') {
+	$.ajax('https://jd-callpower.herokuapp.com/call/create', {
+	    userPhone: phone,
+	    campaignId: call_power_campaign
+	});
+    }
+});
+
+</script>
+
 {% endblock %}
