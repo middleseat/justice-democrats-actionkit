@@ -171,6 +171,8 @@ By submitting this form, you are agreeing to receive periodic updates from Justi
   }
 
   function toggleTarget (ev) {
+    ev.preventDefault();
+
     var el = ev.target
     var targetId = el.getAttribute('data-target')
     var toggleAll = el.getAttribute('data-all')
