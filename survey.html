@@ -58,7 +58,7 @@
 <script>
 
 $(window).load( function() {
-	var url = new URL(url_string);
+	var url = new URL(window.location.href);
 	var event_id = url.searchParams.get("event_id");
 
 	$("#id_action_event_id").closest('.ak-err-above').hide();
