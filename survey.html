@@ -58,13 +58,14 @@
 <script>
 
 $(window).load( function() {
-	$.urlParam = function(name){
-		var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-		return results[1] || 0;
-	}
-	
+	var url = new URL(url_string);
+	var event_id = url.searchParams.get("event_id");
+
 	$("#id_action_event_id").closest('.ak-err-above').hide();
-	$("#id_action_event_id").val($.urlParam('event_id'));
+	
+	if (event_id) {
+		$("#id_action_event_id").val(event_id);
+	}
 	
 	$("#id_action_text_their_list_yes").on("click", function () {
 		$("#id_action_text_their_list_instructions").prop("required", true);
