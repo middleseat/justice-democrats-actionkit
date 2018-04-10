@@ -14,6 +14,7 @@
 
     <input type="hidden" name="page" id="id_page" value="{{ page.name }}">
     <input type="hidden" name="event_id" value="{{ args.event_id }}">
+    <input type="hidden" name="skip_confirmation" value="{{ event.custom_fields.no_confirmation|default:"0" }}">
 
     {% if event.is_open_for_signup or update %}
 
