@@ -442,6 +442,8 @@ $(window).load( function() {
         $('[name="redirect"]').val(url);
     }
 
+    $('#ak-fieldbox-action_event_turnout_requested').hide();
+	
     if (direct_publish) {
 	var current_tags = JSON.parse($('#id_event_tags').val());
         current_tags[0] = 'Source: Direct Publish';
@@ -460,7 +462,6 @@ $(window).load( function() {
 	$("#id_action_event_turnout_requested_no").on('change', toggleRedirect);
         $("#id_action_event_turnout_requested_yes").on('change', toggleRedirect);
     } else {
-        $('#ak-fieldbox-action_event_turnout_requested').hide();
 	$('#ak-fieldbox-action_event_candidate').hide();
     }
 
