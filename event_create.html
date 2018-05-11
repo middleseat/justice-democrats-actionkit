@@ -78,32 +78,6 @@
                         </script>
 
                     {% endwith %}
-               
-                    {% with event_ends_at as date_field %}
-                        <div id="id_event_ends_at_row">
-                            <label for="id_event_ends_at">End date/time<span class="ak-required-flag">*</span></label>
-                            {% include "./date_picker.html" %}
-                        </div>
-
-                        <script type="text/javascript">
-                            // Replace animation w/instant show, because anim
-                            // breaks tabbing quickly past the date field.
-                            jQuery.fn.showFast = function(speed, callback) {
-                                this.show()
-                                callback()
-                            }
-                            // Removing datepicker doesn't break anything, and
-                            // it might even be useful -- I can imagine users
-                            // being confused when the picker covers up other
-                            // key form fields.
-                            $(function() {
-                                $("#id_event_ends_at_date").datepicker( {
-                                    minDate: 0, showAnim: 'showFast'
-                                } )
-                            } );
-                        </script>
-
-                    {% endwith %}
 
                     {% if campaign.use_ends_at %}
                         {% with event_ends_at as date_field %}
